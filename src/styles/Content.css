@@ -1,0 +1,24 @@
+.wrap-center{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.wrap-content{
+	display: flex;
+	justify-content: space-between;
+	width: 75%;
+	max-width: 990px;
+}
+
+.content{
+	width: 80%;
+}
+
+.menu-nav{
+	width: 18%;
+}
+
+a{
+	text-decoration: none;
+}
