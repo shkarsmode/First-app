@@ -21,7 +21,7 @@ const App = () => {
            </div>
 
            <div className='content'>
-             news, my page...
+             news, my page....
            </div>
 
          </div>
