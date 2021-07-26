@@ -1,8 +1,7 @@
 import React from 'react';
-import Nav from './Nav';
-import News from './News';
-import "../styles/Content.css";
-
+import Nav from '../Nav/Nav';
+import News from '../News/News';
+import "./Content.css";
 
 const Content = () => {
 	return(

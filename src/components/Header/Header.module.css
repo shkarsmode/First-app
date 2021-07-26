@@ -1,4 +1,4 @@
-.wrap-header{
+.wrap{
 	display: flex;
 	justify-content: center;
 	width: 100%;
@@ -8,7 +8,7 @@
 	margin-bottom: 10px;
 }
 
-.header__inner{
+.inner{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -16,11 +16,11 @@
 	max-width: 990px;
 }
 
-.header__inner svg:first-child{
+.inner svg:first-child{
 	cursor: pointer;
 }
 
-.header-right{
+.right{
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -29,16 +29,16 @@
 	padding: 0 10px;
 }
 
-.header-right:hover{
+.right:hover{
 	background-color: #d1d2d433;
 }
 
-.header-right svg{
+.right svg{
 	fill: #d1d2d4;
 	margin-left: -5px;
 }
 
-.header-right img{
+.right img{
 	border-radius: 50%;
 	width: 32px;
 }
