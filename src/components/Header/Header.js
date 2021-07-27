@@ -1,8 +1,6 @@
 import React from 'react';
 import h from './Header.module.css';
 
-console.log(h);
-
 const Header = () => {
 	return(
 		<div className={h.wrap}>

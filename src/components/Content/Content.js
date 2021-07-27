@@ -1,4 +1,5 @@
 import React from 'react';
+import MyPage from '../MyPage/MyPage';
 import Nav from '../Nav/Nav';
 import News from '../News/News';
 import "./Content.css";
@@ -8,7 +9,8 @@ const Content = () => {
 		<div className="wrap-center">
 			<div className="wrap-content">
 				<Nav />
-				<News />
+				<MyPage />
+				{/* <News /> */}
 			</div>
 		</div>
 	);

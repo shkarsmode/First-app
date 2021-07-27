@@ -1,0 +1,34 @@
+.content{
+	display: flex;
+	column-gap: 13px;
+	width: 100%;
+}
+
+.block{
+	background-color: white;
+	border: 1px solid #d1d2d479;
+	border-radius: 4px;
+}
+
+.img{
+	width: 230px;
+	height: 383px;
+
+}
+
+.descr{
+	width: 550px;
+	height: 256px;
+}
+
+.post{
+	margin-top: 13px;
+	width: 550px;
+	height: 52px;
+}
+
+.posts{
+	margin-top: 13px;
+	width: 550px;
+	height: 100px;
+}
