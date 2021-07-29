@@ -53,7 +53,7 @@ const Nav = () =>{
 							</svg>
 							News
 						</li>
-					</NavLink>
+						</NavLink>
 					<NavLink to="/dialogs" activeClassName='act'>
 						<li>
 							<svg
