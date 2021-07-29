@@ -12,6 +12,7 @@ const Content = () => {
 		<div className="wrap-center">
 			<div className="wrap-content">
 				<Nav />
+				
 				<Route component={MyPage}/>
 				<Route component={Dialogs}/>
 				<Route component={News}/>
