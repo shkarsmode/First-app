@@ -1,10 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () =>{
 	return(
 		<div className="menu-nav">
 				<ul>
-					<a href="/profile">
+					<NavLink to="/profile" activeClassName='act'>
 						<li>
 							<svg
 								height="20"
@@ -21,8 +22,8 @@ const Nav = () =>{
 							</svg>
 							My profile
 						</li>
-					</a>
-					<a href="/news">
+					</NavLink>
+					<NavLink to="/news" activeClassName='act'>
 						<li>
 							<svg
 								width="20"
@@ -52,8 +53,8 @@ const Nav = () =>{
 							</svg>
 							News
 						</li>
-					</a>
-					<a href="/dialogs">
+					</NavLink>
+					<NavLink to="/dialogs" activeClassName='act'>
 						<li>
 							<svg
 								width="20"
@@ -85,7 +86,7 @@ const Nav = () =>{
 							</svg>
 							Messeges
 						</li>
-					</a>
+					</NavLink>
 				</ul>
 			</div>
 	);

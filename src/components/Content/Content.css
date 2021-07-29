@@ -30,6 +30,10 @@
 	background-color: #d1d2d425;
 }
 
+div.menu-nav > ul > a.act > li{
+	background-color: #d1d2d425;
+}
+
 ul{
 	list-style-type: none;
 	margin-left: -5px;

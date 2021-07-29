@@ -12,10 +12,10 @@ const Content = () => {
 		<div className="wrap-center">
 			<div className="wrap-content">
 				<Nav />
-				
-				<Route component={MyPage}/>
-				<Route component={Dialogs}/>
-				<Route component={News}/>
+				{/* <Route path='/' component={MyPage}/> */}
+				<Route path='/profile' component={MyPage}/>
+				<Route path='/dialogs' component={Dialogs}/>
+				<Route path='/news' component={News}/>
 
 			</div>
 		</div>
