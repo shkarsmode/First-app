@@ -10,11 +10,11 @@ const Content = () => {
 		<div className="wrap-center">
 			<div className="wrap-content">
 				<Nav />
-
+				
 				<Dialogs />
 				{/* <MyPage /> */}
 				{/* <News /> */}
-				
+
 			</div>
 		</div>
 	);
