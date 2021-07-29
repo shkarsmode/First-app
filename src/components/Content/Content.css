@@ -9,6 +9,7 @@
 	justify-content: space-between;
 	width: 75%;
 	max-width: 990px;
+	column-gap: 10px;
 }
 
 .content{
@@ -39,7 +40,7 @@ ul li{
 	align-items: center;
 	column-gap: 10px;
 	font-weight: 400;
-	width: 153px;
+	width: auto;
 	height: 30px;
 	padding: 5px;
 	border-radius: 6px;

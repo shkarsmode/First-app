@@ -4,7 +4,7 @@ const Nav = () =>{
 	return(
 		<div className="menu-nav">
 				<ul>
-					<a href="#">
+					<a href="/profile">
 						<li>
 							<svg
 								height="20"
@@ -22,7 +22,7 @@ const Nav = () =>{
 							My profile
 						</li>
 					</a>
-					<a href="#">
+					<a href="/news">
 						<li>
 							<svg
 								width="20"
@@ -53,7 +53,7 @@ const Nav = () =>{
 							News
 						</li>
 					</a>
-					<a href="#">
+					<a href="/dialogs">
 						<li>
 							<svg
 								width="20"
@@ -83,7 +83,7 @@ const Nav = () =>{
 									</g>
 								</g>
 							</svg>
-							Messenger
+							Messeges
 						</li>
 					</a>
 				</ul>

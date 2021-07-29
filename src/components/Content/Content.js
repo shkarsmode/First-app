@@ -1,4 +1,5 @@
 import React from 'react';
+import Dialogs from '../Dialogs/Dialogs';
 import MyPage from '../MyPage/MyPage';
 import Nav from '../Nav/Nav';
 import News from '../News/News';
@@ -9,8 +10,11 @@ const Content = () => {
 		<div className="wrap-center">
 			<div className="wrap-content">
 				<Nav />
-				<MyPage />
+
+				<Dialogs />
+				{/* <MyPage /> */}
 				{/* <News /> */}
+				
 			</div>
 		</div>
 	);
