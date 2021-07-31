@@ -27,7 +27,7 @@ const MyPage = () =>{
 					<div className={p.name}>Daniil SHkarupa<span>last seen 10 minutes ago</span></div>
 					<div className={p.status}>Set status</div>
 					<div className={p.inf}>
-						Birthday Current
+						Birthday Current!!
 					</div>
 				</div>
 				<div className={p.bottom}></div>
