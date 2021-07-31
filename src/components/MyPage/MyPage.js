@@ -24,13 +24,31 @@ const MyPage = () =>{
 		<div className={p.right}>
 			<div className={`${p.descr} ${p.block}`}>
 				<div className={p.top}>
-					<div className={p.name}>Daniil SHkarupa<span>last seen 10 minutes ago</span></div>
+					<div className={p.name}>Daniil Shkarupa<span>last seen 10 minutes ago</span></div>
 					<div className={p.status}>Set status</div>
 					<div className={p.inf}>
-						Birthday Current!!
+						<table>
+							<tr>
+								<td>Birthday:</td>
+								<td>January 9, 1991</td>
+							</tr>
+							<tr>
+								<td>Current city:</td>
+								<td>Moscow</td>
+							</tr>
+						</table>
+						<div className={p.show_wrap}>
+							<div className={p.show}>Show full information</div>
+						</div>
 					</div>
 				</div>
-				<div className={p.bottom}></div>
+				<div className={p.bottom}>
+					<div className={p.count}>194<div>friends</div></div>
+					<div className={p.count}>194<div>friends</div></div>
+					<div className={p.count}>194<div>friends</div></div>
+					<div className={p.count}>194<div>friends</div></div>
+					<div className={p.count}>194<div>friends</div></div>
+				</div>
 			</div>
 			<div className={`${p.post} ${p.block}`}>
 				What's new?

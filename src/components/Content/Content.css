@@ -89,3 +89,10 @@ ul li svg{
 	height: 120px;
 
 }
+
+@media (max-width: 1280px) {
+	.wrap-content{
+		width: 100%;
+		margin: 0 10px;
+	}	
+}
