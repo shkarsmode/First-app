@@ -32,3 +32,60 @@
 	width: 550px;
 	height: 100px;
 }
+
+.img_inner{
+	padding: 15px;
+	padding-bottom: 10px;
+}
+
+.edit{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 30px;
+	margin: 0 15px;
+	background-color: rgb(229, 235, 241);
+	color: rgb(85, 103, 125);
+	font-size: 12.5px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: normal;
+}
+
+.edit:hover{
+	color: rgba(80, 108, 143, 0.801);
+}
+
+.spec{
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 8px;
+	width: 100%;
+}
+
+.spec_inner{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	align-items: left;
+	height: 36px;
+	color: rgb(129, 140, 153);
+	font-weight: normal;
+	padding: 0px 15px;
+}
+
+.spec_inner:hover{
+	background-color: #F5F6F8;
+}
+.spec_inner:hover svg{
+	color: rgb(88, 100, 114);
+}
+
+
+.svg svg{
+	color: rgb(129, 140, 153);
+	margin-right: 10px;
+}
