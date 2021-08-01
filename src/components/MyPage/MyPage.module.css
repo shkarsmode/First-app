@@ -6,7 +6,7 @@
 
 .block{
 	background-color: white;
-	border: 1px solid #d1d2d479;
+	border: 1px solid #c6c7c967;
 	border-radius: 4px;
 }
 
@@ -39,7 +39,8 @@
 .posts{
 	margin-top: 13px;
 	width: 550px;
-	height: 100px;
+	margin-bottom: -1px;
+
 }
 
 .img_inner{
@@ -203,4 +204,35 @@ input{
 
 input:focus{
 	outline: none;
+}
+
+.post_top{
+	display: flex;
+	column-gap: 20px;
+	padding: 0 20px;
+	font-size: 13px;
+	height: 46px;
+	border-bottom: 1px solid #d1d2d479;
+}
+
+.post_top div{
+	display: flex;
+	align-items: center;
+	height: 100%;
+	cursor: pointer;
+}
+
+.post_top div:hover{
+	border-bottom: 2px solid #d1d2d43f;
+	border-top: 2px solid transparent;
+}
+
+.post_top .active{
+	border-bottom: 2px solid #5181b8;
+	border-top: 2px solid transparent;
+}
+
+.post_top .active:hover{
+	border-bottom: 2px solid #5181b8;
+	border-top: 2px solid transparent;
 }

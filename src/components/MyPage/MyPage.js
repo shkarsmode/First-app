@@ -55,9 +55,14 @@ const MyPage = () =>{
 				<input placeholder="What's new?"/>
 			</div>
 			<div className={`${p.posts} ${p.block}`}>
-				<Post title='first'/>
-				<Post title='Second'/>
+				<div className={p.post_top}>
+					<div className={p.active}>All posts</div>
+					<div>My posts</div>
+					<div>Post archive</div>
+				</div>
 			</div>
+			<Post id='1' title='first'/>
+			<Post title='second'/>
 		</div>
 	</div>
 );

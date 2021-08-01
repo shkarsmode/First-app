@@ -1,8 +1,11 @@
 import React from 'react';
+import p from './Post.module.css';
 
 const Post = (props) => {
 	return(
-		<div>Its the {props.title}</div>
+		<div className={props.id ? p.bordNone : p.wrap}>
+			
+		</div>
 	);
 }
 
