@@ -51,7 +51,8 @@ const MyPage = () =>{
 				</div>
 			</div>
 			<div className={`${p.post} ${p.block}`}>
-				What's new?
+				<img src='https://sun6-23.userapi.com/s/v1/if2/O5q4KiqYj9GmUQ8_M-7ocdXaSextWXONCFg2jb3cd3-KviAuvoEe83nQ3FhI2ncbUFqGRBquxUU4mywCX5qDLrCC.jpg?size=50x0&quality=96&crop=223,142,626,626&ava=1'></img>
+				<input placeholder="What's new?"/>
 			</div>
 			<div className={`${p.posts} ${p.block}`}>
 				<Post title='first'/>
