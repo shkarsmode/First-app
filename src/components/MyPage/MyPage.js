@@ -1,6 +1,7 @@
 import React from 'react';
 import p from './MyPage.module.css';
 import Post from '../Post/Post';
+import Friend from '../Friend/Friend';
 
 const MyPage = () =>{
 	return(
@@ -17,8 +18,16 @@ const MyPage = () =>{
 					<div className={p.spec_inner}><div className={p.svg}><svg height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M17.8 3.1a4.5 4.5 0 012.35.44 3.17 3.17 0 011.31 1.31c.3.57.42 1.11.44 2.1V12a.9.9 0 01-1.8.11V8.9H3.9v5.9c0 .87.06 1.18.23 1.5.13.25.32.44.57.57.3.16.58.22 1.31.23H18.83l-1.47-1.46a.9.9 0 01-.08-1.18l.08-.1a.9.9 0 011.18-.08l.1.08 3 3a.9.9 0 01.08 1.18l-.08.1-3 3a.9.9 0 01-1.36-1.18l.08-.1 1.47-1.46H6.2c-1.07 0-1.65-.1-2.21-.37l-.14-.07a3.17 3.17 0 01-1.32-1.31 4.2 4.2 0 01-.44-2.1V7.21c0-1.16.11-1.74.44-2.35a3.17 3.17 0 011.31-1.32c.57-.3 1.11-.42 2.1-.44h.25zm0 1.8H6.2c-.88 0-1.18.06-1.5.23-.25.13-.44.32-.57.57-.16.3-.22.58-.23 1.31v.09h16.2v-.09c-.01-.73-.07-1.02-.23-1.3a1.37 1.37 0 00-.57-.58c-.3-.16-.58-.22-1.31-.23z" fill="currentColor"></path></svg></div>Money transfers</div>
 				</div>
 			</div>
-			<div className={p.friends}>
-				friends
+			<div className={`${p.wrap_friends} ${p.block}`}>
+				<div>Friends <span>194</span></div>
+				<div className={p.friends}>
+					<Friend name='Dmitry' url='https://sun6-20.userapi.com/s/v1/ig2/P-OoTYB8oSfhhp5s0rofLhlaMkEUZZguy1_MI3ueiTNr2ER3hnUk8gqzwa8Ob2yYggWMf1aPcuGP16KB6JFEgDVy.jpg?size=50x0&quality=96&crop=86,167,1459,1459&ava=1'/>
+					<Friend name='Nastya' url='https://sun6-23.userapi.com/s/v1/if1/F02cNj9AJf4u6ocDSUuNPrMxuywii79FcUqbk1o8X-_LUinqLU7ZR5LpJw1O0ILOeSccf70l.jpg?size=50x0&quality=96&crop=3,287,1615,1615&ava=1'/>
+					<Friend name='Vadim' url='https://sun6-22.userapi.com/s/v1/if1/glM1f85wfy0D0osBDsFleibFeciFfCt-nPKB17IOYAgxPfR4lhXVh5JaCujlOCDkdgZggM4L.jpg?size=50x0&quality=96&crop=31,47,577,577&ava=1'/>
+					<Friend name='Vika' url='https://sun6-22.userapi.com/s/v1/if1/XbL2-KNcMnUqDZCF9uIgUUrj35wrnaS0QE3JhUvwOnH9FpomwaQqlrHqQ7QFwJ7byUqmUB5_.jpg?size=50x0&quality=96&crop=127,127,705,705&ava=1'/>
+					<Friend name='Jeka' url='https://sun6-20.userapi.com/s/v1/if1/1N6B5MOKe2PBFHGH6OYO9euQ372yryp-kA2hTWCHvzbI8wm0iBfK9rKj8Yq_yOjHGnBzjg.jpg?size=50x0&quality=96&crop=695,215,415,415&ava=1'/>
+					<Friend name='Irina' url='https://sun6-21.userapi.com/s/v1/ig2/XFOvmletk-fnKphtwjOGaWfiER5eWf0vHxtm64m70ECJUHQJ5T1dxpHGRldquv-069dmTv4wOPF843P8PsTMGern.jpg?size=50x0&quality=96&crop=13,10,2135,2135&ava=1'/>
+				</div>
 			</div>
 		</div>
 		<div className={p.right}>

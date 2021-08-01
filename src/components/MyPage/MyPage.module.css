@@ -236,3 +236,25 @@ input:focus{
 	border-bottom: 2px solid #5181b8;
 	border-top: 2px solid transparent;
 }
+
+.friends{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	/* grid-template-rows: 1fr 1fr; */
+	row-gap: 10px;
+
+}
+
+div.content > div:nth-child(1) > div.wrap_friends.block> div:nth-child(1){
+	margin-bottom: 10px;
+}
+
+div.content > div:nth-child(1) > div.wrap_friends.block> div:nth-child(1) span{
+	color: #939393;
+	font-weight: normal;
+}
+
+.wrap_friends{
+	padding: 15px;
+	margin-top: 15px;
+}
