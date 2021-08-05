@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Dialogs from '../Dialogs/Dialogs';
 import MyPage from '../MyPage/MyPage';
-import Nav from '../Nav/Nav';
+import Nav from './Nav/Nav';
 import News from '../News/News';
 import "./Content.css";
 import Messages from '../Dialogs/Messages/Messages';
