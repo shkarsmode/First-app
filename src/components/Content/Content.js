@@ -16,7 +16,6 @@ const Content = () => {
 				<Route path='/profile' component={MyPage}/>
 				<Route path='/dialogs' component={Dialogs}/>
 				<Route path='/news' component={News}/>
-
 			</div>
 		</div>
 		</BrowserRouter>

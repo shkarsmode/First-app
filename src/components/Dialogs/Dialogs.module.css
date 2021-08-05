@@ -12,7 +12,7 @@
 	width: 100%;
 	background-color: white;
 	border: 1px solid #c6c7c967;
-	border-bottom: 0px solid transparent;
+	border-bottom: 0;
 	padding: 10px 20px;
 	padding-right: 30px;
 	cursor: pointer;
@@ -22,7 +22,7 @@
 	background-color: #f5f6f8;
 }
 
-.wrap .mes:last-child{
+.wrap a:last-child .mes{
 	border-bottom: 1px solid #c6c7c967;
 }
 
@@ -64,15 +64,29 @@
 }
 
 .mesMain{
+	position: relative;
 	padding: 0;
 	height: 48px;
 }
 
 .inp{
-	padding: 10px 20px;
+	padding: 10px 40px;
 }
 
 .inp::placeholder{
 	color: #a7afb9;
 	font-weight: normal;
+}
+
+.svg{
+	position: absolute;
+	width: 15px;
+	fill: grey;
+	margin-left: 15px;
+	pointer-events: none;
+}
+
+.wrap a{
+	text-decoration: none;
+	color: black;
 }
