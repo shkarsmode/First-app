@@ -1,7 +1,7 @@
 import React from 'react';
 import d from './Dialogs.module.css';
 
-const Messege = (props) =>{
+const Message = (props) =>{
 	return(
 		<div className={d.mes}>
 			<div>
@@ -19,4 +19,4 @@ const Messege = (props) =>{
 	);
 }
 
-export default Messege;
+export default Message;

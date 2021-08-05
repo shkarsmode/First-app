@@ -5,7 +5,7 @@ import MyPage from '../MyPage/MyPage';
 import Nav from '../Nav/Nav';
 import News from '../News/News';
 import "./Content.css";
-import Messeges from '../Messeges/Messeges';
+import Messages from '../Messages/Messages';
 
 const Content = () => {
 	return(
@@ -17,7 +17,7 @@ const Content = () => {
 				<Route path='/profile' component={MyPage}/>
 				<Route exact path='/dialogs' component={Dialogs}/>
 				<Route path='/news' component={News}/>
-				<Route path='/dialogs/:id' component={Messeges}/>
+				<Route path='/dialogs/:id' component={Messages}/>
 			</div>
 		</div>
 		</BrowserRouter>

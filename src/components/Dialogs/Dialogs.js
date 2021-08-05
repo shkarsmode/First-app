@@ -1,6 +1,6 @@
 import React from 'react';
 import d from './Dialogs.module.css';
-import Messege from './Messege';
+import Message from './Message';
 import { NavLink } from 'react-router-dom';
 
 const Dialogs = () =>{
@@ -30,7 +30,7 @@ const Dialogs = () =>{
 const DiaItem = (props) =>{
 	return(
 		<NavLink to={`/dialogs/id${props.id}`}>
-			<Messege name={props.name} url={props.url}/>
+			<Message name={props.name} url={props.url}/>
 		</NavLink>
 	);
 }

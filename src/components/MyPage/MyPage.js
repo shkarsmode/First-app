@@ -4,6 +4,14 @@ import Post from '../Post/Post';
 import Friend from '../Friend/Friend';
 
 const MyPage = () =>{
+
+	let postsData = [
+		{id: 1, title: 'It`s my first post!'},
+		{id: 2, title: 'It`s my second post! WOW!'}
+	];
+
+	let posts = postsData.map(post => (<Post id={post.id} title={post.title} />));
+
 	return(
 	<div className={p.content}>
 		<div className={p.left}>
@@ -70,8 +78,8 @@ const MyPage = () =>{
 					<div>Post archive</div>
 				</div>
 			</div>
-			<Post id='1' title='first'/>
-			<Post title='second'/>
+			{posts}
+
 		</div>
 	</div>
 );

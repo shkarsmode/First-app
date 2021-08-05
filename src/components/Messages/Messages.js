@@ -1,5 +1,5 @@
 import React from 'react';
-import m from './Messeges.module.css';
+import m from './Messages.module.css';
 
 const Message = (props) =>{
 	return(
@@ -13,7 +13,7 @@ const Message = (props) =>{
 	);
 }
 
-const Messeges = () =>{
+const Messages = () =>{
 	window.onresize = function () {
 		if(m.content && window.innerHeight > 300) 
 			document.getElementsByClassName(m.content)[0].style.height = window.innerHeight-225 + 'px';
@@ -61,7 +61,7 @@ const Messeges = () =>{
 
 }
 
-export default Messeges;
+export default Messages;
 
 
 
