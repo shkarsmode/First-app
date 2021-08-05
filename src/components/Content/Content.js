@@ -5,7 +5,7 @@ import MyPage from '../MyPage/MyPage';
 import Nav from '../Nav/Nav';
 import News from '../News/News';
 import "./Content.css";
-import Messages from '../Messages/Messages';
+import Messages from '../Dialogs/Messages/Messages';
 
 const Content = () => {
 	return(

@@ -1,6 +1,6 @@
 import React from 'react';
 import p from './MyPage.module.css';
-import Post from '../Post/Post';
+import Post from './Post/Post';
 import Friend from '../Friend/Friend';
 
 const MyPage = () =>{

@@ -165,8 +165,9 @@ tr td:last-child{
 	position: relative;
 	width: 100%;
 	display: flex;
-	left: 158px;
+	justify-content: center;
 	color: #366799;
+	/* padding-right: 63px; */
 
 }
 
