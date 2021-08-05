@@ -14,7 +14,7 @@ const Content = () => {
 				<Nav />
 				{/* <Route path='/' component={MyPage}/> */}
 				<Route path='/profile' component={MyPage}/>
-				<Route path='/dialogs' component={Dialogs}/>
+				<Route exact path='/dialogs' component={Dialogs}/>
 				<Route path='/news' component={News}/>
 			</div>
 		</div>
