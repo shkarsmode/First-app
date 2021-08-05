@@ -3,12 +3,15 @@ import d from './Dialogs.module.css';
 
 const Messege = (props) =>{
 	return(
-		<div>
+		<div className={d.mes}>
 			<div>
-				<img src={props.url} alt="" />
+				<img className={d.img} src={props.url} alt="" />
 			</div>
-			<div>
-				{props.name}
+			<div className={d.cont}>
+				<div className={d.name}>
+					<span>{props.name}</span>
+					<span>4:53pm</span>
+				</div>
 				<span>Last messege</span>
 			</div>
 		
