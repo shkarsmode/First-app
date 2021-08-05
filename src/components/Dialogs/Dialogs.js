@@ -13,10 +13,18 @@ const Dialogs = () =>{
 				<input placeholder='Search' className={d.inp}>
 				</input>
 			</div>
-
-			<NavLink to='/dialogs/id2'><Messege name='Vitalya Grudkin' url='https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'/></NavLink>
-			<NavLink to='/dialogs/id3'><Messege name='Maks Barishov' url='https://sun6-21.userapi.com/s/v1/ig1/B5EgucLMdYcVwnurQ_B6u1pLIXQsW-ZlfPuGlqKJXVTVB2Z0Mydy6_c37cHgW69lDdsx-tWW.jpg?size=50x0&quality=96&crop=275,101,470,470&ava=1' /></NavLink>
+			<DiaItem id='2' name='Vitalya Grudkin' url='https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'/>
+			<DiaItem id='3' name='Maks Barishov' url='https://sun6-21.userapi.com/s/v1/ig1/B5EgucLMdYcVwnurQ_B6u1pLIXQsW-ZlfPuGlqKJXVTVB2Z0Mydy6_c37cHgW69lDdsx-tWW.jpg?size=50x0&quality=96&crop=275,101,470,470&ava=1'/>
+			<DiaItem id='4' name='Olexandr Serdyuk' url='https://sun6-22.userapi.com/s/v1/if2/mmeHCdCqnwTla0qJ5X_7WfS3eMX-YHjaJjmdi_x2cT1lQl6Unlij7acqiv3gJ1hs0NHZaFBBrsexvdtNaqo-6g18.jpg?size=50x0&quality=96&crop=162,162,1296,1296&ava=1'/>
 		</div>
+	);
+}
+
+const DiaItem = (props) =>{
+	return(
+		<NavLink to={`/dialogs/id${props.id}`}>
+				<Messege name={props.name} url={props.url}/>
+		</NavLink>
 	);
 }
 
