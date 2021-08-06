@@ -3,14 +3,11 @@ import p from './MyPage.module.css';
 import Post from './Post/Post';
 import Friend from './Friend/Friend';
 
-const MyPage = () =>{
+const MyPage = (props) =>{
 
-	let postsData = [
-		{id: 1, title: 'It`s my first post!'},
-		{id: 2, title: 'It`s my second post! WOW!'}
-	];
+	let posts = props.postsData.map(post => (<Post id={post.id} title={post.title} />));
 
-	let posts = postsData.map(post => (<Post id={post.id} title={post.title} />));
+	let friends = props.friendsData.map(friend => (<Friend name={friend.name} url={friend.url}/>));
 
 	return(
 	<div className={p.content}>
@@ -29,12 +26,7 @@ const MyPage = () =>{
 			<div className={`${p.wrap_friends} ${p.block}`}>
 				<div>Friends <span>194</span></div>
 				<div className={p.friends}>
-					<Friend name='Dmitry' url='https://sun6-20.userapi.com/s/v1/ig2/P-OoTYB8oSfhhp5s0rofLhlaMkEUZZguy1_MI3ueiTNr2ER3hnUk8gqzwa8Ob2yYggWMf1aPcuGP16KB6JFEgDVy.jpg?size=50x0&quality=96&crop=86,167,1459,1459&ava=1'/>
-					<Friend name='Nastya' url='https://sun6-23.userapi.com/s/v1/if1/F02cNj9AJf4u6ocDSUuNPrMxuywii79FcUqbk1o8X-_LUinqLU7ZR5LpJw1O0ILOeSccf70l.jpg?size=50x0&quality=96&crop=3,287,1615,1615&ava=1'/>
-					<Friend name='Vadim' url='https://sun6-22.userapi.com/s/v1/if1/glM1f85wfy0D0osBDsFleibFeciFfCt-nPKB17IOYAgxPfR4lhXVh5JaCujlOCDkdgZggM4L.jpg?size=50x0&quality=96&crop=31,47,577,577&ava=1'/>
-					<Friend name='Vika' url='https://sun6-22.userapi.com/s/v1/if1/XbL2-KNcMnUqDZCF9uIgUUrj35wrnaS0QE3JhUvwOnH9FpomwaQqlrHqQ7QFwJ7byUqmUB5_.jpg?size=50x0&quality=96&crop=127,127,705,705&ava=1'/>
-					<Friend name='Jeka' url='https://sun6-20.userapi.com/s/v1/if1/1N6B5MOKe2PBFHGH6OYO9euQ372yryp-kA2hTWCHvzbI8wm0iBfK9rKj8Yq_yOjHGnBzjg.jpg?size=50x0&quality=96&crop=695,215,415,415&ava=1'/>
-					<Friend name='Irina' url='https://sun6-21.userapi.com/s/v1/ig2/XFOvmletk-fnKphtwjOGaWfiER5eWf0vHxtm64m70ECJUHQJ5T1dxpHGRldquv-069dmTv4wOPF843P8PsTMGern.jpg?size=50x0&quality=96&crop=13,10,2135,2135&ava=1'/>
+					{friends}
 				</div>
 			</div>
 		</div>

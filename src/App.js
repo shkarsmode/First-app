@@ -3,11 +3,11 @@ import "./App.css";
 import Header from './components/Header/Header';
 import Content from './components/Content/Content';
 
-const App = () => {
+const App = (props) => {
   return (
     <div className="wrap">
       <Header />
-      <Content />
+      <Content messegesData={props.messegesData} postsData={props.postsData} dialogsData={props.dialogsData} friendsData={props.friendsData}/>
     </div>
   );
 };

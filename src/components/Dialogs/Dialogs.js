@@ -3,15 +3,9 @@ import d from './Dialogs.module.css';
 import Message from './Message';
 import { NavLink } from 'react-router-dom';
 
-const Dialogs = () =>{
+const Dialogs = (props) =>{
 	
-	let dialogsData = [
-		{id: 2, name: 'Vitalya Grudkin', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-		{id: 3, name: 'Maks Barishov', url: 'https://sun6-21.userapi.com/s/v1/ig1/B5EgucLMdYcVwnurQ_B6u1pLIXQsW-ZlfPuGlqKJXVTVB2Z0Mydy6_c37cHgW69lDdsx-tWW.jpg?size=50x0&quality=96&crop=275,101,470,470&ava=1'},
-		{id: 4, name: 'Olexandr Serdyuk', url: 'https://sun6-22.userapi.com/s/v1/if2/mmeHCdCqnwTla0qJ5X_7WfS3eMX-YHjaJjmdi_x2cT1lQl6Unlij7acqiv3gJ1hs0NHZaFBBrsexvdtNaqo-6g18.jpg?size=50x0&quality=96&crop=162,162,1296,1296&ava=1'}
-	];
-
-	let dialogsElements = dialogsData.map(el => (<DiaItem id={el.id} name={el.name} url={el.url}/>));
+	let dialogsElements = props.dialogsData.map(el => (<DiaItem id={el.id} name={el.name} url={el.url}/>));
 
 	return(		
 		<div className={d.wrap}>

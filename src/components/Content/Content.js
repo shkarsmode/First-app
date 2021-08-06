@@ -7,17 +7,17 @@ import News from '../News/News';
 import "./Content.css";
 import Messages from '../Dialogs/Messages/Messages';
 
-const Content = () => {
+const Content = (props) => {
 	return(
 		<BrowserRouter>
 		<div className="wrap-center">
 			<div className="wrap-content">
 				<Nav />
 				{/* <Route path='/' component={MyPage}/> */}
-				<Route path='/profile' component={MyPage}/>
-				<Route exact path='/dialogs' component={Dialogs}/>
-				<Route path='/news' component={News}/>
-				<Route path='/dialogs/:id' component={Messages}/>
+				<Route path='/profile' render = {() => <MyPage postsData={props.postsData} friendsData={props.friendsData}/>}/>
+				<Route exact path='/dialogs' render = {() => <Dialogs dialogsData={props.dialogsData}/>}/>
+				<Route path='/news' render = {() => <News/>}/>
+				<Route path='/dialogs/:id' render = {() => <Messages messegesData={props.messegesData}/>}/>
 			</div>
 		</div>
 		</BrowserRouter>
