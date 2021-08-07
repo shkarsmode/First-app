@@ -5,9 +5,9 @@ import Friend from './Friend/Friend';
 
 const MyPage = (props) =>{
 
-	let posts = props.postsData.map(post => (<Post id={post.id} title={post.title} />));
+	let posts = props.state.postsData.map(post => (<Post id={post.id} title={post.title} />));
 
-	let friends = props.friendsData.map(friend => (<Friend name={friend.name} url={friend.url}/>));
+	let friends = props.state.friendsData.map(friend => (<Friend name={friend.name} url={friend.url}/>));
 
 	return(
 	<div className={p.content}>

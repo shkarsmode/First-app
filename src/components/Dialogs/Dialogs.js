@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const Dialogs = (props) =>{
 	
-	let dialogsElements = props.dialogsData.map(el => (<DiaItem id={el.id} name={el.name} url={el.url}/>));
+	let dialogsElements = props.diaData.map(el => (<DiaItem id={el.id} name={el.name} url={el.url}/>));
 
 	return(		
 		<div className={d.wrap}>

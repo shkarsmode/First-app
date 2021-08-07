@@ -7,7 +7,9 @@ const App = (props) => {
   return (
     <div className="wrap">
       <Header />
-      <Content messegesData={props.messegesData} postsData={props.postsData} dialogsData={props.dialogsData} friendsData={props.friendsData}/>
+      <Content 
+      stateDialogs={props.state.dialogsPage}
+      stateProfile={props.state.profilePage}/>
     </div>
   );
 };
