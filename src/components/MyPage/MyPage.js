@@ -6,8 +6,15 @@ import Friend from './Friend/Friend';
 const MyPage = (props) =>{
 
 	let posts = props.state.postsData.map(post => (<Post id={post.id} title={post.title} />));
-
 	let friends = props.state.friendsData.map(friend => (<Friend name={friend.name} url={friend.url}/>));
+
+	let input = React.createRef();
+	let createPost = (el)=>{
+		if(el.code == "Enter" && input.current.value != ''){
+			console.log(input.current.value);
+			input.current.value = '';
+		}
+	}
 
 	return(
 	<div className={p.content}>
@@ -61,7 +68,7 @@ const MyPage = (props) =>{
 			</div>
 			<div className={`${p.post} ${p.block}`}>
 				<img src='https://sun6-23.userapi.com/s/v1/if2/O5q4KiqYj9GmUQ8_M-7ocdXaSextWXONCFg2jb3cd3-KviAuvoEe83nQ3FhI2ncbUFqGRBquxUU4mywCX5qDLrCC.jpg?size=50x0&quality=96&crop=223,142,626,626&ava=1'></img>
-				<input placeholder="What's new?"/>
+				<input className={p.input} onKeyDown={createPost} ref={input} placeholder="What's new?"/>
 			</div>
 			<div className={`${p.posts} ${p.block}`}>
 				<div className={p.post_top}>
