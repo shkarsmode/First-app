@@ -27,7 +27,7 @@ const Messages = (props) =>{
 	};
 
 	let messages = props.mesData.map((mess) => {
-		return	<Message name={mess.name} mess={mess.mess} url={mess.url}/>
+		return <Message name={mess.name} mess={mess.mess} url={mess.url}/>
 	});
 
 	let input = React.createRef();
@@ -43,9 +43,9 @@ const Messages = (props) =>{
 		if(el.code == "Enter" && input.current.value != ''){
 			props.addMessage(input.current.value);
 			input.current.value = '';
-		}
+		} 
 	}
-	
+
 	return(
 		<div className={m.wrap}>
 			<div className={m.top}>
