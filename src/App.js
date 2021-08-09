@@ -9,7 +9,8 @@ const App = (props) => {
       <Header />
       <Content 
       stateDialogs={props.state.dialogsPage}
-      stateProfile={props.state.profilePage}/>
+      stateProfile={props.state.profilePage}
+      addPost={props.addPost}/>
     </div>
   );
 };

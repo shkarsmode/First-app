@@ -4,14 +4,13 @@ import Post from './Post/Post';
 import Friend from './Friend/Friend';
 
 const MyPage = (props) =>{
-
 	let posts = props.state.postsData.map(post => (<Post id={post.id} title={post.title} />));
 	let friends = props.state.friendsData.map(friend => (<Friend name={friend.name} url={friend.url}/>));
 
 	let input = React.createRef();
 	let createPost = (el)=>{
 		if(el.code == "Enter" && input.current.value != ''){
-			console.log(input.current.value);
+			props.addPost(input.current.value);
 			input.current.value = '';
 		}
 	}
