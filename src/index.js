@@ -4,13 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from './redux/state';
-import {addPost} from './redux/state';
-
-// addPost('hello!!');
+import {addPost, addMessage} from './redux/state';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App state={state} addPost={addPost} />
+    <App state={state} addPost={addPost} addMessage={addMessage}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

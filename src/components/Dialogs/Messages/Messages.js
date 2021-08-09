@@ -33,18 +33,19 @@ const Messages = (props) =>{
 	let input = React.createRef();
 	let sendMessage = ()=> {
 		if(input.current.value != ''){
-			console.log(input.current.value);
+			// console.log(input.current.value);
+			props.addMessage(input.current.value);
 			input.current.value = '';
 		}
 	}
+
 	let sendMessage2 = (el)=> {
 		if(el.code == "Enter" && input.current.value != ''){
-			console.log(input.current.value);
+			props.addMessage(input.current.value);
 			input.current.value = '';
 		}
-
 	}
-
+	
 	return(
 		<div className={m.wrap}>
 			<div className={m.top}>

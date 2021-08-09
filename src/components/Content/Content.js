@@ -17,7 +17,7 @@ const Content = (props) => {
 				<Route path='/profile' render = {() => <MyPage state={props.stateProfile} addPost={props.addPost}/>}/>
 				<Route exact path='/dialogs' render = {() => <Dialogs diaData={props.stateDialogs.dialogsData}/>}/>
 				<Route path='/news' render = {() => <News />}/>
-				<Route path='/dialogs/:id' render = {() => <Messages mesData={props.stateDialogs.messegesData}/>}/>
+				<Route path='/dialogs/:id' render = {() => <Messages mesData={props.stateDialogs.messegesData} addMessage={props.addMessage}/>}/>
 			</div>
 		</div>
 		</BrowserRouter>
