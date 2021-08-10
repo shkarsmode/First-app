@@ -43,8 +43,15 @@ const Messages = (props) =>{
 		if(el.code == "Enter" && input.current.value != ''){
 			props.addMessage(input.current.value);
 			input.current.value = '';
+			// scrollDown();
+
 		} 
 	}
+	// function scrollDown(){
+	// 	let scroll = document.querySelector('#scroll');
+	// 	scroll.scrollIntoView({block: "end"});
+	// 	// console.log(scroll);
+	// }
 
 	return(
 		<div className={m.wrap}>
@@ -54,7 +61,7 @@ const Messages = (props) =>{
 				<img className={m.img} src="https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1" alt="" />
 			</div>
 				<div className={m.content} ref={content}>
-					<div>
+					<div id='scroll'>
 						<span>today</span>
 						{messages}
 					</div>
@@ -69,8 +76,9 @@ const Messages = (props) =>{
 		</div>
 		
 	);
-
+	
 }
+
 
 export default Messages;
 
