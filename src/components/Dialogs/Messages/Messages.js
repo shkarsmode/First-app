@@ -26,7 +26,7 @@ const Messages = (props) =>{
 		content.current.style.height = window.innerHeight-225 + 'px';
 	};
 
-	let messages = props.mesData.map((mess) => {
+	let messages = props.mesData.messegesData.map((mess) => {
 		return <Message name={mess.name} mess={mess.mess} url={mess.url}/>
 	});
 
