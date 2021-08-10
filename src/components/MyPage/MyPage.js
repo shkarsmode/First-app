@@ -76,7 +76,9 @@ const MyPage = (props) =>{
 					<div>Post archive</div>
 				</div>
 			</div>
-			{posts}
+			<div className={p.flex}>
+				{posts}
+			</div>
 
 		</div>
 	</div>
