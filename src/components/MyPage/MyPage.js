@@ -10,7 +10,7 @@ const MyPage = (props) =>{
 	let input = React.createRef();
 	let createPost = (el)=>{
 		if(el.code == "Enter" && input.current.value != ''){
-			props.addPost(input.current.value);
+			props.addPost();
 			props.updatePostText('');
 		}
 	}

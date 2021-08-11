@@ -31,8 +31,8 @@ let state = {
 
 }
 
-export let addPost = (text)=>{
-	let newPosts = {id: 5, title: text};
+export let addPost = ()=>{
+	let newPosts = {id: 5, title: state.profilePage.newPostText};
 	state.profilePage.postsData.push(newPosts);
 	rerenderEntireTree(state);
 }
