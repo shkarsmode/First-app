@@ -14,7 +14,10 @@ const Content = (props) => {
 			<div className="wrap-content">
 				<Nav />
 				{/* <Route path='/' component={MyPage}/> */}
-				<Route path='/profile' render = {() => <MyPage state={props.stateProfile} addPost={props.addPost}/>}/>
+				<Route path='/profile' render = {() => <MyPage 
+				state={props.stateProfile} 
+				addPost={props.addPost} 
+				updatePostText={props.updatePostText}/>}/>
 				<Route exact path='/dialogs' render = {() => <Dialogs diaData={props.stateDialogs.dialogsData}/>}/>
 				<Route path='/news' render = {() => <News />}/>
 				<Route path='/dialogs/:id' render = {() => <Messages mesData={props.stateDialogs} addMessage={props.addMessage}/>}/>

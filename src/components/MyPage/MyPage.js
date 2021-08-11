@@ -11,9 +11,13 @@ const MyPage = (props) =>{
 	let createPost = (el)=>{
 		if(el.code == "Enter" && input.current.value != ''){
 			props.addPost(input.current.value);
-			input.current.value = '';
+			props.updatePostText('');
 		}
 	}
+
+let updatePost = ()=> {
+	props.updatePostText(input.current.value);
+}
 
 	return(
 	<div className={p.content}>
@@ -67,7 +71,7 @@ const MyPage = (props) =>{
 			</div>
 			<div className={`${p.post} ${p.block}`}>
 				<img src='https://sun6-23.userapi.com/s/v1/if2/O5q4KiqYj9GmUQ8_M-7ocdXaSextWXONCFg2jb3cd3-KviAuvoEe83nQ3FhI2ncbUFqGRBquxUU4mywCX5qDLrCC.jpg?size=50x0&quality=96&crop=223,142,626,626&ava=1'></img>
-				<input className={p.input} onKeyDown={createPost} ref={input} placeholder="What's new?"/>
+				<input className={p.input} onChange={updatePost} value={props.state.newPostText} onKeyDown={createPost} ref={input} placeholder="What's new?"/>
 			</div>
 			<div className={`${p.posts} ${p.block}`}>
 				<div className={p.post_top}>

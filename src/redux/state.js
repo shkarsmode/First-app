@@ -4,23 +4,6 @@ let state = {
 	dialogsPage: {
 		messegesData: [
 			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
-			{name: 'Vitalya Grudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1'},
 			{name: 'Daniil Shkarupa', mess: 'Делаю соц-сеть!', url: 'https://sun6-23.userapi.com/s/v1/if2/O5q4KiqYj9GmUQ8_M-7ocdXaSextWXONCFg2jb3cd3-KviAuvoEe83nQ3FhI2ncbUFqGRBquxUU4mywCX5qDLrCC.jpg?size=50x0&quality=96&crop=223,142,626,626&ava=1'}],
 		
 		dialogsData: [
@@ -34,7 +17,9 @@ let state = {
 		postsData: [
 			{id: 1, title: 'It`s my first post!'},
 			{id: 2, title: 'It`s my second post! WOW!'}],	
-	
+		
+		newPostText : '',
+
 		friendsData: [
 			{name: 'Dmitry', url: 'https://sun6-20.userapi.com/s/v1/ig2/P-OoTYB8oSfhhp5s0rofLhlaMkEUZZguy1_MI3ueiTNr2ER3hnUk8gqzwa8Ob2yYggWMf1aPcuGP16KB6JFEgDVy.jpg?size=50x0&quality=96&crop=86,167,1459,1459&ava=1'},
 			{name: 'Nastya', url: 'https://sun6-23.userapi.com/s/v1/if1/F02cNj9AJf4u6ocDSUuNPrMxuywii79FcUqbk1o8X-_LUinqLU7ZR5LpJw1O0ILOeSccf70l.jpg?size=50x0&quality=96&crop=3,287,1615,1615&ava=1'},
@@ -49,6 +34,11 @@ let state = {
 export let addPost = (text)=>{
 	let newPosts = {id: 5, title: text};
 	state.profilePage.postsData.push(newPosts);
+	rerenderEntireTree(state);
+}
+
+export let updatePostText = (text)=>{
+	state.profilePage.newPostText = text;
 	rerenderEntireTree(state);
 }
 
