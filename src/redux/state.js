@@ -28,7 +28,6 @@ let state = {
 			{name: 'Jeka', url: 'https://sun6-20.userapi.com/s/v1/if1/1N6B5MOKe2PBFHGH6OYO9euQ372yryp-kA2hTWCHvzbI8wm0iBfK9rKj8Yq_yOjHGnBzjg.jpg?size=50x0&quality=96&crop=695,215,415,415&ava=1'},
 			{name: 'Irina', url: 'https://sun6-21.userapi.com/s/v1/ig2/XFOvmletk-fnKphtwjOGaWfiER5eWf0vHxtm64m70ECJUHQJ5T1dxpHGRldquv-069dmTv4wOPF843P8PsTMGern.jpg?size=50x0&quality=96&crop=13,10,2135,2135&ava=1'},]
 	}
-
 }
 
 let rerenderEntireTree =()=>{} // callback from observer
