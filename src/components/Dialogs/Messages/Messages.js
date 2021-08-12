@@ -43,8 +43,6 @@ const Messages = (props) =>{
 		if(el.code == "Enter" && input.current.value != ''){
 			props.addMessage(input.current.value);
 			input.current.value = '';
-			// scrollDown();
-
 		} 
 	}
 	// function scrollDown(){
@@ -78,7 +76,6 @@ const Messages = (props) =>{
 	);
 	
 }
-
 
 export default Messages;
 

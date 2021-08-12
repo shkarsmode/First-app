@@ -1,3 +1,5 @@
+// BLL - Business Logic Layer
+
 let state = {
 	dialogsPage: {
 		messegesData: [
@@ -29,8 +31,7 @@ let state = {
 
 }
 
-let rerenderEntireTree =()=>{
-}
+let rerenderEntireTree =()=>{} // callback from observer
 
 export let addPost = ()=>{
 	let newPosts = {id: 5, title: state.profilePage.newPostText};
