@@ -23,7 +23,7 @@ const Messages = (props) =>{
 
 	window.onload = function() {
 		if(content.current && window.innerHeight > 300)
-		content.current.style.height = window.innerHeight-225 + 'px';
+		content.current.style.height = window.innerHeight-225 + 'px';	
 	};
 
 	let messages = props.mesData.messegesData.map((mess) => {
