@@ -11,7 +11,6 @@ const MyPage = (props) =>{
 	let createPost = (el)=>{
 		if(el.code == "Enter" && input.current.value != ''){
 			props.addPost();
-			props.updatePostText('');
 		}
 	}
 

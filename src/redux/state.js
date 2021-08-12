@@ -1,5 +1,3 @@
-import { rerenderEntireTree } from "../render";
-
 let state = {
 	dialogsPage: {
 		messegesData: [
@@ -31,9 +29,13 @@ let state = {
 
 }
 
+let rerenderEntireTree =()=>{
+}
+
 export let addPost = ()=>{
 	let newPosts = {id: 5, title: state.profilePage.newPostText};
 	state.profilePage.postsData.push(newPosts);
+	updatePostText('');
 	rerenderEntireTree(state);
 }
 
@@ -46,6 +48,10 @@ export let addMessage = (mess)=> {
 	let newMessage = {name: 'Daniil', mess: mess, url: 'https://sun6-23.userapi.com/s/v1/if2/O5q4KiqYj9GmUQ8_M-7ocdXaSextWXONCFg2jb3cd3-KviAuvoEe83nQ3FhI2ncbUFqGRBquxUU4mywCX5qDLrCC.jpg?size=50x0&quality=96&crop=223,142,626,626&ava=1'};
 	state.dialogsPage.messegesData.push(newMessage);
 	rerenderEntireTree(state);
+}
+
+export const subscribe = (observer)=>{
+	rerenderEntireTree = observer;
 }
 
 export default state;
