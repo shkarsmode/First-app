@@ -33,7 +33,6 @@ const Messages = (props) =>{
 	let input = React.createRef();
 	let sendMessage = ()=> {
 		if(input.current.value != ''){
-			// console.log(input.current.value);
 			props.addMessage(input.current.value);
 			input.current.value = '';
 		}
@@ -45,6 +44,7 @@ const Messages = (props) =>{
 			input.current.value = '';
 		} 
 	}
+
 	// function scrollDown(){
 	// 	let scroll = document.querySelector('#scroll');
 	// 	scroll.scrollIntoView({block: "end"});
@@ -72,9 +72,7 @@ const Messages = (props) =>{
 				</div>
 			</div>
 		</div>
-		
-	);
-	
+	);	
 }
 
 export default Messages;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Dialogs from '../Dialogs/Dialogs';
 import MyPage from '../MyPage/MyPage';
 import Nav from './Nav/Nav';
@@ -9,7 +9,6 @@ import Messages from '../Dialogs/Messages/Messages';
 
 const Content = (props) => {
 	return(
-		<BrowserRouter>
 		<div className="wrap-center">
 			<div className="wrap-content">
 				<Nav />
@@ -23,7 +22,6 @@ const Content = (props) => {
 				<Route path='/dialogs/:id' render = {() => <Messages mesData={props.stateDialogs} addMessage={props.addMessage}/>}/>
 			</div>
 		</div>
-		</BrowserRouter>
 	);
 }
 
