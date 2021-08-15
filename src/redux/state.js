@@ -1,4 +1,4 @@
-// BLL - Business Logic Layer
+// BLL - Business Logic Layer OOP
 let store = {
 	_state: {
 		dialogsPage: {
