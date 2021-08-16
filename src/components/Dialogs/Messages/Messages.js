@@ -33,14 +33,16 @@ const Messages = (props) =>{
 	let input = React.createRef();
 	let sendMessage = ()=> {
 		if(input.current.value != ''){
-			props.addMessage(input.current.value);
+			// props.addMessage(input.current.value);
+			props.dispatch({type: 'ADD-MESSAGE', mess: input.current.value});
 			input.current.value = '';
 		}
 	}
 
 	let sendMessage2 = (el)=> {
 		if(el.code == "Enter" && input.current.value != ''){
-			props.addMessage(input.current.value);
+			// props.addMessage(input.current.value);
+			props.dispatch({type: 'ADD-MESSAGE', mess: input.current.value});
 			input.current.value = '';
 		} 
 	}

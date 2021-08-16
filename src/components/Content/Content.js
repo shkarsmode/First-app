@@ -14,16 +14,15 @@ const Content = (props) => {
 				<Nav />
 				{/* <Route path='/' component={MyPage}/> */}
 				<Route path='/profile' render = {() => 
-				<MyPage 
-				state={props.stateProfile} 
-				addPost={props.addPost} 
-				updatePostText={props.updatePostText}/>}/>
+					<MyPage 
+					state={props.stateProfile} 
+					dispatch={props.dispatch}/>}/>
 				<Route exact path='/dialogs' render = {() => 
-				<Dialogs diaData={props.stateDialogs.dialogsData}/>}/>
+					<Dialogs diaData={props.stateDialogs.dialogsData}/>}/>
 				<Route path='/news' render = {() => 
-				<News />}/>
+					<News />}/>
 				<Route path='/dialogs/:id' render = {() => 
-				<Messages mesData={props.stateDialogs} addMessage={props.addMessage}/>}/>
+					<Messages mesData={props.stateDialogs} dispatch={props.dispatch}/>}/>
 			</div>
 		</div>
 	);

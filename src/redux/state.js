@@ -26,27 +26,29 @@ let store = {
 				{name: 'Irina', url: 'https://sun6-21.userapi.com/s/v1/ig2/XFOvmletk-fnKphtwjOGaWfiER5eWf0vHxtm64m70ECJUHQJ5T1dxpHGRldquv-069dmTv4wOPF843P8PsTMGern.jpg?size=50x0&quality=96&crop=13,10,2135,2135&ava=1'},]
 		}
 	},
+	_rerenderEntireTree(){}, // callback from observer
+
 	getState(){
 		return this._state;
 	},
-	rerenderEntireTree(){}, // callback from observer
-	addPost(){
-		let newPosts = {id: 5, title: this._state.profilePage.newPostText};
-		this._state.profilePage.postsData.push(newPosts);
-		this.updatePostText('');
-		this.rerenderEntireTree(store);
-	},
-	updatePostText(text){
-		this._state.profilePage.newPostText = text;
-		this.rerenderEntireTree(store);
-	},
-	addMessage(mess){
-		let newMessage = {name: 'Daniil', mess: mess, url: 'https://sun6-23.userapi.com/s/v1/if2/O5q4KiqYj9GmUQ8_M-7ocdXaSextWXONCFg2jb3cd3-KviAuvoEe83nQ3FhI2ncbUFqGRBquxUU4mywCX5qDLrCC.jpg?size=50x0&quality=96&crop=223,142,626,626&ava=1'};
-		this._state.dialogsPage.messegesData.push(newMessage);
-		this.rerenderEntireTree(store);
-	},
 	subscribe(observer){
-		this.rerenderEntireTree = observer;
+		this._rerenderEntireTree = observer;
+	},
+	
+	dispatch(action){
+		if(action.type === 'ADD-POST'){
+			let newPosts = {id: 5, title: this._state.profilePage.newPostText};
+			this._state.profilePage.postsData.push(newPosts);
+			this._state.profilePage.newPostText = '';
+			this._rerenderEntireTree(store);
+		} else if(action.type === 'UPDATE-POST-TEXT'){
+			this._state.profilePage.newPostText = action.text;
+			this._rerenderEntireTree(store);
+		} else if(action.type === 'ADD-MESSAGE'){
+			let newMessage = {name: 'Daniil', mess: action.mess, url: 'https://sun6-23.userapi.com/s/v1/if2/O5q4KiqYj9GmUQ8_M-7ocdXaSextWXONCFg2jb3cd3-KviAuvoEe83nQ3FhI2ncbUFqGRBquxUU4mywCX5qDLrCC.jpg?size=50x0&quality=96&crop=223,142,626,626&ava=1'};
+			this._state.dialogsPage.messegesData.push(newMessage);
+			this._rerenderEntireTree(store);
+		}
 	}
 }
 

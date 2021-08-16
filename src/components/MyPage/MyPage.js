@@ -10,12 +10,15 @@ const MyPage = (props) =>{
 	let input = React.createRef();
 	let createPost = (el)=>{
 		if(el.code == "Enter" && input.current.value != ''){
-			props.addPost();
+			// props.addPost();
+			props.dispatch({type: 'ADD-POST'});
 		}
 	}
 
 let updatePost = ()=> {
-	props.updatePostText(input.current.value);
+	// props.updatePostText(input.current.value);
+	props.dispatch({type: 'UPDATE-POST-TEXT', text: input.current.value});
+
 }
 
 	return(
