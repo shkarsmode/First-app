@@ -74,6 +74,7 @@ div.content > div > span{
 	border: 1px solid #d3d9de;
 	border-radius: 6px;
 	padding: 0 15px;
+	outline: none;
 }
 
 .input::placeholder{
