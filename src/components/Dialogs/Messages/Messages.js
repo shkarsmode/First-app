@@ -17,15 +17,8 @@ const Message = (props) =>{
 let content = React.createRef();
 
 const Messages = (props) =>{
-	window.onresize = function () {
-		if(content.current && window.innerHeight > 300) 
-		content.current.style.height = window.innerHeight-225 + 'px';
-	};
-
-	window.onload = function() {
-		if(content.current && window.innerHeight > 300)
-		content.current.style.height = window.innerHeight-225 + 'px';	
-	};
+	window.onresize = () => onloadOnresize();
+	window.onload = ()=> onloadOnresize();
 
 	function onloadOnresize(){
 		if(content.current && window.innerHeight > 300) 
