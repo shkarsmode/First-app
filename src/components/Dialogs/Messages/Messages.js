@@ -1,4 +1,5 @@
 import React from 'react';
+import { addMessageActionCreator } from '../../../redux/state';
 import m from './Messages.module.css';
 
 const Message = (props) =>{
@@ -26,25 +27,29 @@ const Messages = (props) =>{
 		content.current.style.height = window.innerHeight-225 + 'px';	
 	};
 
+	function onloadOnresize(){
+		if(content.current && window.innerHeight > 300) 
+		content.current.style.height = window.innerHeight-225 + 'px';
+	}
+
 	let messages = props.mesData.messegesData.map((mess) => {
 		return <Message name={mess.name} mess={mess.mess} url={mess.url}/>
 	});
 
 	let input = React.createRef();
 	let sendMessage = ()=> {
-		if(input.current.value != ''){
-			// props.addMessage(input.current.value);
-			props.dispatch({type: 'ADD-MESSAGE', mess: input.current.value});
-			input.current.value = '';
-		}
+		if(input.current.value != '')
+			sendMessageHelp();
 	}
 
 	let sendMessage2 = (el)=> {
-		if(el.code == "Enter" && input.current.value != ''){
-			// props.addMessage(input.current.value);
-			props.dispatch({type: 'ADD-MESSAGE', mess: input.current.value});
-			input.current.value = '';
-		} 
+		if(el.code == "Enter" && input.current.value != '')
+			sendMessageHelp();
+	}
+
+	function sendMessageHelp(){
+		props.dispatch(addMessageActionCreator(input.current.value));
+		input.current.value = '';
 	}
 
 	// function scrollDown(){

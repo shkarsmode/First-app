@@ -2,6 +2,7 @@ import React from 'react';
 import p from './MyPage.module.css';
 import Post from './Post/Post';
 import Friend from './Friend/Friend';
+import { addPostActionCreator, updatePostActionCreator } from '../../redux/state';
 
 const MyPage = (props) =>{
 	let posts = props.state.postsData.map(post => (<Post id={post.id} title={post.title} />));
@@ -9,18 +10,12 @@ const MyPage = (props) =>{
 
 	let input = React.createRef();
 	let createPost = (el)=>{
-		if(el.code == "Enter" && input.current.value != ''){
-			// props.addPost();
-			props.dispatch({type: 'ADD-POST'});
-		}
+		if(el.code == "Enter" && input.current.value != '')
+			props.dispatch(addPostActionCreator());
 	}
 
-let updatePost = ()=> {
-	// props.updatePostText(input.current.value);
-	props.dispatch({type: 'UPDATE-POST-TEXT', text: input.current.value});
-
-}
-
+	let updatePost = ()=> props.dispatch(updatePostActionCreator(input.current.value));
+	
 	return(
 	<div className={p.content}>
 		<div className={p.left}>

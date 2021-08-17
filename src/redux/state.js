@@ -47,4 +47,24 @@ let store = {
 	}
 }
 
+export let addMessageActionCreator = (mess)=>{
+	return {
+		type: 'ADD-MESSAGE',
+		mess: mess
+	}
+}
+
+export let addPostActionCreator = ()=>{
+	return{
+		type: 'ADD-POST'
+	}
+}
+
+export let updatePostActionCreator = (text)=>{
+	return{
+		type: 'UPDATE-POST-TEXT',
+		text: text
+	}
+}
+
 export default store;
