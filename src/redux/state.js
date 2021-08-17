@@ -1,4 +1,8 @@
 // BLL - Business Logic Layer OOP
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const ADD_POST = 'ADD-POST';
+const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
+
 let store = {
 	_state: {
 		dialogsPage: {
@@ -31,15 +35,15 @@ let store = {
 	subscribe(observer){this._rerenderEntireTree = observer},
 	
 	dispatch(action){
-		if(action.type === 'ADD-POST'){
+		if(action.type === ADD_POST){
 			let newPosts = {id: 5, title: this._state.profilePage.newPostText};
 			this._state.profilePage.postsData.push(newPosts);
 			this._state.profilePage.newPostText = '';
 			this._rerenderEntireTree(store);
-		} else if(action.type === 'UPDATE-POST-TEXT'){
+		} else if(action.type === UPDATE_POST_TEXT){
 			this._state.profilePage.newPostText = action.text;
 			this._rerenderEntireTree(store);
-		} else if(action.type === 'ADD-MESSAGE'){
+		} else if(action.type === ADD_MESSAGE){
 			let newMessage = {name: 'Daniil', mess: action.mess, url: 'https://sun6-23.userapi.com/s/v1/if2/O5q4KiqYj9GmUQ8_M-7ocdXaSextWXONCFg2jb3cd3-KviAuvoEe83nQ3FhI2ncbUFqGRBquxUU4mywCX5qDLrCC.jpg?size=50x0&quality=96&crop=223,142,626,626&ava=1'};
 			this._state.dialogsPage.messegesData.push(newMessage);
 			this._rerenderEntireTree(store);
@@ -49,20 +53,20 @@ let store = {
 
 export let addMessageActionCreator = (mess)=>{
 	return {
-		type: 'ADD-MESSAGE',
+		type: ADD_MESSAGE,
 		mess: mess
 	}
 }
 
 export let addPostActionCreator = ()=>{
 	return{
-		type: 'ADD-POST'
+		type: ADD_POST
 	}
 }
 
 export let updatePostActionCreator = (text)=>{
 	return{
-		type: 'UPDATE-POST-TEXT',
+		type: UPDATE_POST_TEXT,
 		text: text
 	}
 }
