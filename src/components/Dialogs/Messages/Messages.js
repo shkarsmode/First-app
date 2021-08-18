@@ -45,7 +45,7 @@ const Messages = (props) =>{
 		props.dispatch(addMessageCre(input.current.value));
 		input.current.value = '';
 	}
-
+	
 	return(
 		<div className={m.wrap}>
 			<div className={m.top}>
@@ -60,7 +60,7 @@ const Messages = (props) =>{
 					</div>
 				</div>
 			<div className={m.send}>
-				<input className={m.input} onChange={updateMessage} onKeyDown={sendMessage2} ref={input} type="text" placeholder='White a message...'/>
+				<input className={m.input} onChange={updateMessage} value={props.mesData.newMessageText} onKeyDown={sendMessage2} ref={input} type="text" placeholder='White a message...'/>
 				<div>
 				<svg onClick={sendMessage} className={m.svg}>
 					</svg>
