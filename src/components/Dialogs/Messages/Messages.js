@@ -1,5 +1,5 @@
 import React from 'react';
-import { addMessageActionCreator } from '../../../redux/state';
+import { addMessageCre } from '../../../redux/state';
 import m from './Messages.module.css';
 
 const Message = (props) =>{
@@ -41,7 +41,7 @@ const Messages = (props) =>{
 	}
 
 	function sendMessageHelp(){
-		props.dispatch(addMessageActionCreator(input.current.value));
+		props.dispatch(addMessageCre(input.current.value));
 		input.current.value = '';
 	}
 

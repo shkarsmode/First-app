@@ -51,13 +51,10 @@ let store = {
 	}
 }
 
-export let addMessageActionCreator = (mess)=>({type: ADD_MESSAGE,	mess: mess});
+export let addMessageCre = (mess)=>({type: ADD_MESSAGE,	mess: mess});
 
-export let addPostActionCreator = ()=>({type: ADD_POST});
+export let addPostCre = ()=>({type: ADD_POST});
 
-export let updatePostActionCreator = (text)=>({
-		type: UPDATE_POST_TEXT,
-		text: text
-});
+export let updatePostCre = (text)=>({type: UPDATE_POST_TEXT, text: text});
 
 export default store;
