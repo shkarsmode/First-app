@@ -1,6 +1,5 @@
 import React from 'react';
-import { addMessageCre } from '../../../redux/state';
-import { updateMessageCre } from '../../../redux/state';
+import { addMessageCre,  updateMessageCre} from '../../../redux/state';
 import m from './Messages.module.css';
 
 const Message = (props) =>{
@@ -18,15 +17,10 @@ const Message = (props) =>{
 let content = React.createRef();
 
 const Messages = (props) =>{
-	window.onresize = () => onloadOnresize();
-	window.onload = ()=> onloadOnresize();
+	window.onresize = () => props.mesData.onloadOnresize(content);
+	window.onload = ()=> props.mesData.onloadOnresize(content);
 
-	function onloadOnresize(){
-		if(content.current && window.innerHeight > 300) 
-		content.current.style.height = window.innerHeight-225 + 'px';
-	}
-
-	let messages = props.mesData.messegesData.map((mess) => <Message name={mess.name} mess={mess.mess} url={mess.url}/>);
+	let messages = props.mesData.messegesData.map(mess => <Message name={mess.name} mess={mess.mess} url={mess.url}/>);
 
 	let input = React.createRef();
 	let sendMessage = ()=> {
@@ -45,7 +39,7 @@ const Messages = (props) =>{
 		props.dispatch(addMessageCre(input.current.value));
 		input.current.value = '';
 	}
-	
+
 	return(
 		<div className={m.wrap}>
 			<div className={m.top}>
