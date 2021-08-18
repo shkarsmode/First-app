@@ -1,5 +1,6 @@
 import React from 'react';
 import { addMessageCre } from '../../../redux/state';
+import { updateMessageCre } from '../../../redux/state';
 import m from './Messages.module.css';
 
 const Message = (props) =>{
@@ -25,9 +26,7 @@ const Messages = (props) =>{
 		content.current.style.height = window.innerHeight-225 + 'px';
 	}
 
-	let messages = props.mesData.messegesData.map((mess) => {
-		return <Message name={mess.name} mess={mess.mess} url={mess.url}/>
-	});
+	let messages = props.mesData.messegesData.map((mess) => <Message name={mess.name} mess={mess.mess} url={mess.url}/>);
 
 	let input = React.createRef();
 	let sendMessage = ()=> {
@@ -40,16 +39,12 @@ const Messages = (props) =>{
 			sendMessageHelp();
 	}
 
+	let updateMessage = ()=> props.dispatch(updateMessageCre(input.current.value));
+
 	function sendMessageHelp(){
 		props.dispatch(addMessageCre(input.current.value));
 		input.current.value = '';
 	}
-
-	// function scrollDown(){
-	// 	let scroll = document.querySelector('#scroll');
-	// 	scroll.scrollIntoView({block: "end"});
-	// 	// console.log(scroll);
-	// }
 
 	return(
 		<div className={m.wrap}>
@@ -65,7 +60,7 @@ const Messages = (props) =>{
 					</div>
 				</div>
 			<div className={m.send}>
-				<input className={m.input} onKeyDown={sendMessage2} ref={input} type="text" placeholder='White a message...'/>
+				<input className={m.input} onChange={updateMessage} onKeyDown={sendMessage2} ref={input} type="text" placeholder='White a message...'/>
 				<div>
 				<svg onClick={sendMessage} className={m.svg}>
 					</svg>
@@ -74,6 +69,13 @@ const Messages = (props) =>{
 		</div>
 	);	
 }
+
+	// function scrollDown(){
+	// 	let scroll = document.querySelector('#scroll');
+	// 	scroll.scrollIntoView({block: "end"});
+	// 	// console.log(scroll);
+	// }
+
 
 export default Messages;
 
