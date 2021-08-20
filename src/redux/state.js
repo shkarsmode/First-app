@@ -1,8 +1,10 @@
 // BLL - Business Logic Layer OOP
+import postReducer from "./post-reducer";
+import dialogsReducer from "./dialogs-reducer";
 const ADD_MESSAGE = 'ADD-MESSAGE';
+const UPDATE_MESSAGE = 'UPDATE_MESSAGE';
 const ADD_POST = 'ADD-POST';
 const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
-const UPDATE_MESSAGE = 'UPDATE_MESSAGE';
 
 let store = {
 	_state: {
@@ -40,16 +42,8 @@ let store = {
 	subscribe(observer){this._rerenderEntireTree = observer},
 	
 	dispatch(action){
-		if(action.type === ADD_POST){
-			let newPosts = {id: 5, title: this._state.profilePage.newPostText};
-			this._state.profilePage.postsData.push(newPosts);
-			this._state.profilePage.newPostText = '';
-		} else if(action.type === UPDATE_POST_TEXT) this._state.profilePage.newPostText = action.text;
-			else if(action.type === ADD_MESSAGE){
-			this._state.dialogsPage.newMessageText = '';
-			let newMessage = {name: 'Daniil Shkarupa', mess: action.mess, url: 'https://picsum.photos/230'};
-			this._state.dialogsPage.messegesData.push(newMessage);
-		} else if(action.type === UPDATE_MESSAGE) this._state.dialogsPage.newMessageText = action.text;
+		this._state.profilePage = postReducer(this._state.profilePage, action);
+		this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
 		this._rerenderEntireTree(store);
 	}
 }
