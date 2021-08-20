@@ -2,7 +2,7 @@ import React from 'react';
 import p from './MyPage.module.css';
 import Post from './Post/Post';
 import Friend from './Friend/Friend';
-import { addPostCre, updatePostCre } from '../../redux/state';
+import { addPostCre, updatePostCre } from '../../redux/post-reducer';
 
 const MyPage = (props) =>{
 	let posts = props.state.postsData.map(post => (<Post id={post.id} title={post.title} />));

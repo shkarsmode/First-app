@@ -11,5 +11,8 @@ const postReducer = (state, action)=>{
 	return state;
 }
 
+export let addPostCre = ()=>({type: ADD_POST});
+export let updatePostCre = (text)=>({type: UPDATE_POST_TEXT, text: text});
+
 export default postReducer;
 

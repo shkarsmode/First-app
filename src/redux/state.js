@@ -48,9 +48,4 @@ let store = {
 	}
 }
 
-export let addMessageCre = (mess)=>({type: ADD_MESSAGE,	mess: mess});
-export let addPostCre = ()=>({type: ADD_POST});
-export let updatePostCre = (text)=>({type: UPDATE_POST_TEXT, text: text});
-export let updateMessageCre = (text)=>({type: UPDATE_MESSAGE, text: text});
-
 export default store;
