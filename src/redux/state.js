@@ -1,10 +1,6 @@
 // BLL - Business Logic Layer OOP
 import postReducer from "./post-reducer";
 import dialogsReducer from "./dialogs-reducer";
-const ADD_MESSAGE = 'ADD-MESSAGE';
-const UPDATE_MESSAGE = 'UPDATE_MESSAGE';
-const ADD_POST = 'ADD-POST';
-const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
 
 let store = {
 	_state: {
@@ -36,12 +32,12 @@ let store = {
 				{name: 'Irina', url: 'https://picsum.photos/274'},]
 		}
 	},
-	_rerenderEntireTree(){}, // callback from observer
 
+	_rerenderEntireTree(){}, // callback from observer
+	
 	getState(){return this._state},
 	subscribe(observer){this._rerenderEntireTree = observer},
-	
-	dispatch(action){
+		dispatch(action){
 		this._state.profilePage = postReducer(this._state.profilePage, action);
 		this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
 		this._rerenderEntireTree(store);

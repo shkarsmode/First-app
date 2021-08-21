@@ -1,7 +1,22 @@
 const ADD_MESSAGE = 'ADD-MESSAGE';
 const UPDATE_MESSAGE = 'UPDATE_MESSAGE';
 
-const dialogsReducer = (state, action)=>{
+let initialState = {
+	messegesData: [
+		{name: 'Vitalya Rudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://picsum.photos/200'},
+		{name: 'Daniil Shkarupa', mess: 'Делаю соц-сеть!', url: 'https://picsum.photos/230'}],
+	newMessageText: '',
+	dialogsData: [
+		{id: 2, name: 'Vitalya Grudkin', url: 'https://picsum.photos/200'},
+		{id: 3, name: 'Maks Barishov', url: 'https://picsum.photos/250'},
+		{id: 4, name: 'Olexandr Serdyuk', url: 'https://picsum.photos/270'}],
+	onloadOnresize(content){
+		if(content.current && window.innerHeight > 300) 
+			content.current.style.height = window.innerHeight-225 + 'px';
+	}
+};
+
+const dialogsReducer = (state = initialState, action)=>{
 	switch(action.type){
 		case ADD_MESSAGE: state.newMessageText = '';
 		let newMessage = {name: 'Daniil Shkarupa', mess: action.mess, url: 'https://picsum.photos/230'};
