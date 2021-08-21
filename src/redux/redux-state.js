@@ -4,7 +4,7 @@ import postReducer from "./post-reducer";
 
 let reducers = combineReducers({
 	dialogsPage: dialogsReducer,
-	profilePage: 	postReducer
+	profilePage: postReducer
 });
 
 let store = createStore(reducers);
