@@ -4,7 +4,7 @@ const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
 let initialState = {
 	postsData: [
 		{id: 1, title: 'It`s my first post!'},
-		{id: 2, title: 'It`s my second post! WOW!'}],	
+		{id: 2, title: 'It`s my second post!'}],	
 	newPostText : '',
 	friendsData: [
 		{name: 'Dmitry', url: 'https://picsum.photos/233'},

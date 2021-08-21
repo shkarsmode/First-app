@@ -4,7 +4,7 @@ const UPDATE_MESSAGE = 'UPDATE_MESSAGE';
 let initialState = {
 	messegesData: [
 		{name: 'Vitalya Rudkin', mess: 'Привет, тут еще кто-то обитает?', url: 'https://picsum.photos/200'},
-		{name: 'Daniil Shkarupa', mess: 'Делаю соц-сеть!', url: 'https://picsum.photos/230'}],
+		{name: 'Daniil Shkarupa', mess: 'Вот такая вот жизнь', url: 'https://picsum.photos/230'}],
 	newMessageText: '',
 	dialogsData: [
 		{id: 2, name: 'Vitalya Grudkin', url: 'https://picsum.photos/200'},
