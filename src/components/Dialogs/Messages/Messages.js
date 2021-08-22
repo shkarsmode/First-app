@@ -1,44 +1,22 @@
 import React from 'react';
-import { addMessageCre,  updateMessageCre} from '../../../redux/dialogs-reducer';
 import m from './Messages.module.css';
 
-const Message = (props) =>{
-	return(
-				<div className={m.wrapMes}>
-					<img className={m.img2} src={props.url} alt="" />
-					<div className={m.name}>
-						<div>{props.name} <span>4:03 pm</span></div>
-						<div>{props.mess}</div>
-					</div>
-				</div>
-	);
-}
 
 let content = React.createRef();
 
 const Messages = (props) =>{
-	window.onresize = () => props.mesData.onloadOnresize(content);
-	window.onload = ()=> props.mesData.onloadOnresize(content);
+	window.onresize = () => props.onloadOnresize(content);
+	window.onload = ()=> props.onloadOnresize(content);
 
-	let messages = props.mesData.messegesData.map(mess => <Message name={mess.name} mess={mess.mess} url={mess.url}/>);
+	let messages = props.messages;
 
 	let input = React.createRef();
-	let sendMessage = ()=> {
-		if(input.current.value != '')
-			sendMessageHelp();
-	}
+	
+	let sendMessage = ()=> props.sendMessage(input.current.value);
 
-	let sendMessage2 = (el)=> {
-		if(el.code == "Enter" && input.current.value != '')
-			sendMessageHelp();
-	}
+	let sendMessage2 = (el)=>	props.sendMessage2(el, input.current.value);
 
-	let updateMessage = ()=> props.dispatch(updateMessageCre(input.current.value));
-
-	function sendMessageHelp(){
-		props.dispatch(addMessageCre(input.current.value));
-		input.current.value = '';
-	}
+	let updateMessage = ()=> props.updateMessage(input.current.value);
 
 	return(
 		<div className={m.wrap}>
@@ -54,7 +32,7 @@ const Messages = (props) =>{
 					</div>
 				</div>
 			<div className={m.send}>
-				<input className={m.input} onChange={updateMessage} value={props.mesData.newMessageText} onKeyDown={sendMessage2} ref={input} type="text" placeholder='White a message...'/>
+				<input className={m.input} onChange={updateMessage} value={props.newMessageText} onKeyDown={sendMessage2} ref={input} type="text" placeholder='White a message...'/>
 				<div>
 				<svg onClick={sendMessage} className={m.svg}>
 					</svg>

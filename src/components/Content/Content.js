@@ -5,7 +5,7 @@ import MyPageContainer from '../MyPage/MyPageContainer';
 import Nav from './Nav/Nav';
 import News from '../News/News';
 import "./Content.css";
-import Messages from '../Dialogs/Messages/Messages';
+import MessagesContainer from '../Dialogs/Messages/MessagesContainer';
 
 const Content = (props) => {
 	return(
@@ -22,7 +22,7 @@ const Content = (props) => {
 				<Route path='/news' render = {() => 
 					<News />}/>
 				<Route path='/dialogs/:id' render = {() => 
-					<Messages mesData={props.stateDialogs} dispatch={props.dispatch}/>}/>
+					<MessagesContainer mesData={props.stateDialogs} dispatch={props.dispatch}/>}/>
 			</div>
 		</div>
 	);
