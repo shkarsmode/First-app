@@ -1,20 +1,13 @@
 import React from 'react';
 import p from './MyPage.module.css';
-import Post from './Post/Post';
-import Friend from './Friend/Friend';
-import { addPostCre, updatePostCre } from '../../redux/post-reducer';
 
 const MyPage = (props) =>{
-	let posts = props.state.postsData.map(post => (<Post id={post.id} title={post.title} />));
-	let friends = props.state.friendsData.map(friend => (<Friend name={friend.name} url={friend.url}/>));
+	let posts = props.posts;
+	let friends = props.friends;
 
 	let input = React.createRef();
-	let createPost = (el)=>{
-		if(el.code == "Enter" && input.current.value != '')
-			props.dispatch(addPostCre());
-	}
-
-	let updatePost = ()=> props.dispatch(updatePostCre(input.current.value));
+	let createPost = (el) => props.createPost(el, input.current.value);
+	let updatePost = () => props.updateNewPostText(input.current.value);
 	
 	return(
 	<div className={p.content}>
@@ -68,7 +61,7 @@ const MyPage = (props) =>{
 			</div>
 			<div className={`${p.post} ${p.block}`}>
 				<img src='https://sun6-23.userapi.com/s/v1/if2/O5q4KiqYj9GmUQ8_M-7ocdXaSextWXONCFg2jb3cd3-KviAuvoEe83nQ3FhI2ncbUFqGRBquxUU4mywCX5qDLrCC.jpg?size=50x0&quality=96&crop=223,142,626,626&ava=1'></img>
-				<input className={p.input} onChange={updatePost} value={props.state.newPostText} onKeyDown={createPost} ref={input} placeholder="What's new?"/>
+				<input className={p.input} onChange={updatePost} value={props.newPostText} onKeyDown={createPost} ref={input} placeholder="What's new?"/>
 			</div>
 			<div className={`${p.posts} ${p.block}`}>
 				<div className={p.post_top}>

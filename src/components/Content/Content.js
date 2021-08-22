@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Dialogs from '../Dialogs/Dialogs';
-import MyPage from '../MyPage/MyPage';
+import MyPageContainer from '../MyPage/MyPageContainer';
 import Nav from './Nav/Nav';
 import News from '../News/News';
 import "./Content.css";
@@ -14,7 +14,7 @@ const Content = (props) => {
 				<Nav />
 				{/* <Route path='/' component={MyPage}/> */}
 				<Route path='/profile' render = {() => 
-					<MyPage 
+					<MyPageContainer 
 					state={props.stateProfile} 
 					dispatch={props.dispatch}/>}/>
 				<Route exact path='/dialogs' render = {() => 
