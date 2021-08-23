@@ -1,7 +1,6 @@
 import React from 'react';
 import m from './Messages.module.css';
 
-
 let content = React.createRef();
 
 const Messages = (props) =>{
@@ -11,11 +10,8 @@ const Messages = (props) =>{
 	let messages = props.messages;
 
 	let input = React.createRef();
-	
 	let sendMessage = ()=> props.sendMessage(input.current.value);
-
 	let sendMessage2 = (el)=>	props.sendMessage2(el, input.current.value);
-
 	let updateMessage = ()=> props.updateMessage(input.current.value);
 
 	return(
@@ -41,13 +37,9 @@ const Messages = (props) =>{
 		</div>
 	);	
 }
-
 	// function scrollDown(){
-	// 	let scroll = document.querySelector('#scroll');
 	// 	scroll.scrollIntoView({block: "end"});
-	// 	// console.log(scroll);
 	// }
-
 
 export default Messages;
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { addMessageCre,  updateMessageCre} from '../../../redux/dialogs-reducer';
-
 import Messages from './Messages';
 import Message from './Message';
 
