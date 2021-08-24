@@ -17,10 +17,7 @@ let mapStateToProps = (state)=>{
 
 let mapDispatchToProps = (dispatch)=>{
 	return{
-		updateNewPostText: (text) => {
-			debugger;
-			dispatch(updatePostCre(text))
-		},
+		updateNewPostText: text => dispatch(updatePostCre(text)),
 		createPost: (el, input)=> {
 			if(el.code == "Enter" && input != '')
 					dispatch(addPostCre());
