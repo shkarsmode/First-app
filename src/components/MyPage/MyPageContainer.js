@@ -6,12 +6,12 @@ import Friend from './Friend/Friend';
 import StoreContext from '../../storeContext';
 
 const MyPageContainer = () =>{
-	return <StoreContext>{
+	return <StoreContext.Consumer>{
 			(store)=>{
-				let state = store.getState();
+				let profilePage = store.getState().profilePage;
 				let dispatch = store.dispatch;
-				let posts = state.postsData.map(post => (<Post id={post.id} title={post.title} />));
-				let friends = state.friendsData.map(friend => (<Friend name={friend.name} url={friend.url}/>));
+				let posts = profilePage.postsData.map(post => (<Post id={post.id} title={post.title}/>));
+				let friends = profilePage.friendsData.map(friend => (<Friend name={friend.name} url={friend.url}/>));
 
 				let createPost = (el, input)=>{
 					if(el.code == "Enter" && input != '')
@@ -24,10 +24,10 @@ const MyPageContainer = () =>{
 					createPost = {createPost} 
 					posts = {posts}
 					friends = {friends}
-					newPostText = {state.newPostText}
+					newPostText = {profilePage.newPostText}
 					/>
 			}	
-		}</StoreContext>
+		}</StoreContext.Consumer>
 }
 
 export default MyPageContainer;
