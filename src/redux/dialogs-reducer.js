@@ -18,6 +18,7 @@ let initialState = {
 
 const dialogsReducer = (state = initialState, action)=>{
 	let stateNew = {...state};
+	stateNew.messegesData = [...state.messegesData];
 	switch(action.type){
 		case ADD_MESSAGE: stateNew.newMessageText = '';
 		let newMessage = {name: 'Daniil Shkarupa', mess: action.mess, url: 'https://picsum.photos/230'};
