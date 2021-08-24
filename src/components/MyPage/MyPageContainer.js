@@ -6,7 +6,8 @@ import Friend from './Friend/Friend';
 import StoreContext from '../../storeContext';
 
 const MyPageContainer = () =>{
-	return <StoreContext.Consumer>{
+	return <StoreContext.Consumer>
+		{
 			(store)=>{
 				let profilePage = store.getState().profilePage;
 				let dispatch = store.dispatch;
@@ -27,7 +28,8 @@ const MyPageContainer = () =>{
 					newPostText = {profilePage.newPostText}
 					/>
 			}	
-		}</StoreContext.Consumer>
+		}
+		</StoreContext.Consumer>
 }
 
 export default MyPageContainer;

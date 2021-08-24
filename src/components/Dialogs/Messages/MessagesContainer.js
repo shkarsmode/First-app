@@ -5,10 +5,11 @@ import Message from './Message';
 import StoreContext from '../../../storeContext';
 
 const MessagesContainer = () =>{
-	return <StoreContext.Consumer>{
+	return <StoreContext.Consumer>
+		{
 		(store)=>{
 			let dispatch = store.dispatch;
-			let dialogsPage = store.getState.dialogsPage;
+			let dialogsPage = store.getState().dialogsPage;
 			let messages = dialogsPage.messegesData.map(mess => <Message name={mess.name} mess={mess.mess} url={mess.url}/>);
 			let sendMessage = (input)=> {
 				if(input != '')
@@ -31,10 +32,9 @@ const MessagesContainer = () =>{
 					sendMessage2 = {sendMessage2}
 					newMessageText = {dialogsPage.newMessageText}
 					onloadOnresize = {dialogsPage.onloadOnresize}/>)
-		}}</StoreContext.Consumer>
+		}}
+		</StoreContext.Consumer>
 }
-
-
 
 export default MessagesContainer;
 

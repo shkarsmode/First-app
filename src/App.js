@@ -3,14 +3,11 @@ import "./App.css";
 import Header from './components/Header/Header';
 import Content from './components/Content/Content';
 
-const App = (props) => {
+const App = () => {
   return (
     <div className="wrap">
       <Header />
-      <Content 
-      stateDialogs={props.state.dialogsPage}
-      stateProfile={props.state.profilePage}
-      dispatch={props.dispatch}/>
+      <Content/>
     </div>
   );
 };

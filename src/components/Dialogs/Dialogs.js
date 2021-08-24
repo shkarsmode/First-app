@@ -1,12 +1,7 @@
 import React from 'react';
 import d from './Dialogs.module.css';
-import Message from './Message';
-import { NavLink } from 'react-router-dom';
 
 const Dialogs = (props) =>{
-	
-	let dialogsElements = props.diaData.map(el => (<DiaItem id={el.id} name={el.name} url={el.url}/>));
-
 	return(		
 		<div className={d.wrap}>
 			<div className={d.first}>
@@ -17,7 +12,7 @@ const Dialogs = (props) =>{
 					<input placeholder='Search' className={d.inp}>
 					</input>
 				</div>
-				{dialogsElements}
+				{props.dialogsElements}
 			</div>
 			<div className={d.second}>
 				<div className={d.active}>All chats</div>
@@ -25,14 +20,6 @@ const Dialogs = (props) =>{
 				<div>Starred messages</div>
 			</div>
 		</div>
-	);
-}
-
-const DiaItem = (props) =>{
-	return(
-		<NavLink to={`/dialogs/id${props.id}`}>
-			<Message name={props.name} url={props.url}/>
-		</NavLink>
 	);
 }
 
