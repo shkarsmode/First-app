@@ -16,13 +16,14 @@ let initialState = {
 };
 
 const postReducer = (state = initialState, action)=>{
+	let stateNew = {...state};
 	switch(action.type){
 		case ADD_POST: let newPosts = {id: 5, title: state.newPostText};
-			state.postsData.push(newPosts);
-			state.newPostText = ''; break;
-		case UPDATE_POST_TEXT: state.newPostText = action.text; break;
+			stateNew.postsData.push(newPosts);
+			stateNew.newPostText = ''; break;
+		case UPDATE_POST_TEXT: stateNew.newPostText = action.text; break;
 	}
-	return state;
+	return stateNew;
 }
 
 export let addPostCre = ()=>({type: ADD_POST});

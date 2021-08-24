@@ -17,12 +17,13 @@ let initialState = {
 };
 
 const dialogsReducer = (state = initialState, action)=>{
+	let stateNew = {...state};
 	switch(action.type){
-		case ADD_MESSAGE: state.newMessageText = '';
+		case ADD_MESSAGE: stateNew.newMessageText = '';
 		let newMessage = {name: 'Daniil Shkarupa', mess: action.mess, url: 'https://picsum.photos/230'};
-		state.messegesData.push(newMessage); break;
-		case UPDATE_MESSAGE: state.newMessageText = action.text; break;
-	} return state;
+		stateNew.messegesData.push(newMessage); break;
+		case UPDATE_MESSAGE: stateNew.newMessageText = action.text; break;
+	} return stateNew;
 }
 
 export let addMessageCre = (mess)=>({type: ADD_MESSAGE,	mess: mess});
