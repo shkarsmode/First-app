@@ -2,18 +2,18 @@ import React from 'react';
 import Message from './Message';
 import { NavLink } from 'react-router-dom';
 import Dialogs from './Dialogs';
-import StoreContext from '../../storeContext';
+import {connect} from 'react-redux';
 
-const DialogsContainer = () =>{
-	return <StoreContext.Consumer>
-		{
-			(store)=> {
-				let dialogsElements = store.getState().dialogsPage.dialogsData.map(el => (<DiaItem id={el.id} name={el.name} url={el.url}/>));
-				return <Dialogs dialogsElements = {dialogsElements}/>
-			}
-		}
-	</StoreContext.Consumer>
-}
+// const DialogsContainer = () =>{
+// 	return <StoreContext.Consumer>
+// 		{
+// 			(store)=> {
+// 				let dialogsElements = store.getState().dialogsPage.dialogsData.map(el => (<DiaItem id={el.id} name={el.name} url={el.url}/>));
+// 				return <Dialogs dialogsElements = {dialogsElements}/>
+// 			}
+// 		}
+// 	</StoreContext.Consumer>
+// }
 
 const DiaItem = (props) =>{
 	return(
@@ -22,5 +22,14 @@ const DiaItem = (props) =>{
 		</NavLink>
 	);
 }
+
+let mapStateToProps=(state)=>{
+	let dialogsElements = state.dialogsPage.dialogsData.map(el => (<DiaItem id={el.id} name={el.name} url={el.url}/>));
+	return{
+		dialogsElements: dialogsElements
+	}
+}
+
+const DialogsContainer = connect(mapStateToProps)(Dialogs);
 
 export default DialogsContainer; 

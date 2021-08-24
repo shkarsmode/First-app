@@ -3,33 +3,31 @@ import { addPostCre, updatePostCre } from '../../redux/post-reducer';
 import MyPage from './MyPage';
 import Post from './Post/Post';
 import Friend from './Friend/Friend';
-import StoreContext from '../../storeContext';
+import {connect} from 'react-redux';
 
-const MyPageContainer = () =>{
-	return <StoreContext.Consumer>
-		{
-			(store)=>{
-				let profilePage = store.getState().profilePage;
-				let dispatch = store.dispatch;
-				let posts = profilePage.postsData.map(post => (<Post id={post.id} title={post.title}/>));
-				let friends = profilePage.friendsData.map(friend => (<Friend name={friend.name} url={friend.url}/>));
-
-				let createPost = (el, input)=>{
-					if(el.code == "Enter" && input != '')
-						dispatch(addPostCre());
-				}
-				let updatePost = (text)=> dispatch(updatePostCre(text));
-				
-				return <MyPage 
-					updateNewPostText = {updatePost}
-					createPost = {createPost} 
-					posts = {posts}
-					friends = {friends}
-					newPostText = {profilePage.newPostText}
-					/>
-			}	
-		}
-		</StoreContext.Consumer>
+let mapStateToProps = (state)=>{
+	let posts = state.profilePage.postsData.map(post => (<Post id={post.id} title={post.title}/>));
+	let friends = state.profilePage.friendsData.map(friend => (<Friend name={friend.name} url={friend.url}/>));
+	return{
+		newPostText: state.profilePage.newPostText,
+		posts: posts,
+		friends: friends
+	}
 }
+
+let mapDispatchToProps = (dispatch)=>{
+	return{
+		updateNewPostText: (text) => {
+			debugger;
+			dispatch(updatePostCre(text))
+		},
+		createPost: (el, input)=> {
+			if(el.code == "Enter" && input != '')
+					dispatch(addPostCre());
+		}
+	}
+}
+
+const MyPageContainer = connect(mapStateToProps, mapDispatchToProps)(MyPage);
 
 export default MyPageContainer;
