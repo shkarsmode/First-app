@@ -22,8 +22,7 @@ const postReducer = (state = initialState, action)=>{
 			return {
 				...state,
 				postsData: [...state.postsData, {id: 5, title: state.newPostText}],
-				newPostText: '',
-				// friendsData: [...state.friendsData]
+				newPostText: ''
 			}
 		case UPDATE_POST_TEXT: 
 			return {
