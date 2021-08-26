@@ -16,17 +16,22 @@ let initialState = {
 };
 
 const postReducer = (state = initialState, action)=>{
-	let stateNew = {...state}; // Change on type [...state] or {...state}
+// Change on type [...state] or {...state}
 	switch(action.type){
 		case ADD_POST:
-			stateNew = {
+			return {
+				...state,
 				postsData: [...state.postsData, {id: 5, title: state.newPostText}],
 				newPostText: '',
-				friendsData: [...state.friendsData]
-			}; break;
-		case UPDATE_POST_TEXT: stateNew.newPostText = action.text; break;
+				// friendsData: [...state.friendsData]
+			}
+		case UPDATE_POST_TEXT: 
+			return {
+				...state,
+				newPostText: action.text
+			}
+		default: return state;
 	}
-	return stateNew;
 }
 
 export let addPostCre = ()=>({type: ADD_POST});
