@@ -7,7 +7,10 @@ const Users = () => {
 		<div className={d.wrap}>
 			<div className={d.first}>
 				<div className={d.block}>
-					<div className={d.top}><span>Friend requests <span className={d.req}>346</span></span><span className={d.show}>Show all </span></div>
+					<div className={d.top}>
+						<span>Friend requests <span className={d.req}>346</span></span>
+						<span className={d.show}>Show all </span>
+					</div>
 					<div className={d.bottom}>
 						<img className={d.img} src="https://picsum.photos/216" alt="" />
 						<div className={d.inf}>
