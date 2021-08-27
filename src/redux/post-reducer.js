@@ -16,7 +16,6 @@ let initialState = {
 };
 
 const postReducer = (state = initialState, action)=>{
-// Change on type [...state] or {...state}
 	switch(action.type){
 		case ADD_POST:
 			return {
