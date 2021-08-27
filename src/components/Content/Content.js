@@ -6,7 +6,7 @@ import News from '../News/News';
 import "./Content.css";
 import MessagesContainer from '../Dialogs/Messages/MessagesContainer';
 import DialogsContainer from '../Dialogs/DialogsContainer';
-import Users from '../Users/Users';
+import Friends from '../Friends/Friends';
 
 const Content = () => {
 	return(
@@ -18,7 +18,7 @@ const Content = () => {
 				<Route exact path='/dialogs' render = {() => <DialogsContainer />}/>
 				<Route path='/news' render = {() => <News />}/>
 				<Route path='/dialogs/:id' render = {() => <MessagesContainer />}/>
-				<Route path='/users' render = {()=> <Users/>}/>
+				<Route path='/users' render = {()=> <Friends/>}/>
 
 			</div>
 		</div>
