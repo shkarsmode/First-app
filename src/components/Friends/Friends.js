@@ -35,10 +35,8 @@ const Users = () => {
 						</div>
 					</div>
 					<div className={d.friends}>
-
 					<User />
 					<User />
-
 				</div>
 				</div>
 			</div>
