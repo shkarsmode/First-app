@@ -11,9 +11,7 @@ const User = ()=> {
 					<div className={d.buttons}><span className={d.message}>White message</span><span className={d.dot}></span><span className={d.message}>Call</span></div>
 				</div>
 			</div>
-			<div className={d.bottom2}>
-				<div></div>
-			</div>
+			<div className={d.bottom2}><div></div></div>
 		</div>
 	)
 };
