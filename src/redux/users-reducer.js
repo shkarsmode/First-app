@@ -6,6 +6,11 @@ const initialState = {
 		],
 		newFriends: [
 			{id: 25, name: 'Dmitriy Bondarenko', url: 'https://picsum.photos/200'}
+		],
+		usersData: [
+			{id: 27, years: 18, name: 'Borya Vykrutasov', sub: 0, url: 'https://picsum.photos/150'},
+			{id: 28, years: 15, name: 'Marina Vykova', sub: 0, url: 'https://picsum.photos/151'},
+			{id: 29, years: 22, name: 'Danya Vykyrdygdanov', sub: 0, url: 'https://picsum.photos/152'}
 		]
 };
 

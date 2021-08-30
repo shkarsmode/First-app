@@ -340,3 +340,20 @@
 .wrap2:last-child .bottom2{
 	display: none;
 }
+
+.flex{
+	display: flex;
+	justify-content: start;
+	column-gap: 57%;
+}
+
+.foll{
+	background-color: #dfe6ed;
+	color: #7a889a;
+}
+
+.foll:hover{
+	opacity: 0.8;
+	background-color: #dfe6ed;
+	color: #7a889a;
+}

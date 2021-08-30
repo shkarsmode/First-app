@@ -3,7 +3,6 @@ import d from './Friends.module.css';
 import { NavLink } from 'react-router-dom';
 
 const Users = (props) => {
-	console.log();
 	return (
 		<div className={d.wrap}>
 			<div className={d.first}>
@@ -24,10 +23,10 @@ const Users = (props) => {
 				<div className={d.block2}>
 					<div className={d.top}>
 						<div className={d.all_online}>
-							<span className={d.active}>All friends <span className={d.req}>{props.friendsCount}</span></span>
-							<span className={d.show}>Friends online</span>
+							<span className={d.active}>Other users</span>
+							{/* <span className={d.show}>Friends online</span> */}
 						</div>
-						<NavLink to="/users"><button className={`${d.sub} ${d.sub2}`} >Find friends</button></NavLink>	
+						{/* <NavLink to="/users"><button className={`${d.sub} ${d.sub2}`} >Find friends</button></NavLink>	 */}
 					</div>
 					<div className={d.center}>
 						<div className={`${d.mes} ${d.mesMain}`}>
@@ -37,15 +36,15 @@ const Users = (props) => {
 					</div>
 					<div className={d.friends}>
 
-					{props.friends}
+					{props.usersData}
 
 				</div>
 				</div>
 			</div>
 			<div className={d.second}>
-				<div className={`${d.active} ${d.active2}`}>My friends</div>
+				<div>My friends</div>
 				<div>Friend requests</div>
-				<div>Find friends</div>
+				<div className={`${d.active} ${d.active2}`}>Find friends</div>
 			</div>
 		</div>
 	)

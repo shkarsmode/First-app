@@ -7,6 +7,7 @@ import "./Content.css";
 import MessagesContainer from '../Dialogs/Messages/MessagesContainer';
 import DialogsContainer from '../Dialogs/DialogsContainer';
 import FriendsContainer from '../Friends/FriendsContainer';
+import UsersContainer from '../Friends/UsersContainer';
 
 const Content = () => {
 	return(
@@ -18,7 +19,8 @@ const Content = () => {
 				<Route exact path='/dialogs' render = {() => <DialogsContainer />}/>
 				<Route path='/news' render = {() => <News />}/>
 				<Route path='/dialogs/:id' render = {() => <MessagesContainer />}/>
-				<Route path='/users' render = {()=> <FriendsContainer />}/>
+				<Route path='/friends' render = {()=> <FriendsContainer />}/>
+				<Route path='/users' render = {()=> <UsersContainer />}/>
 
 			</div>
 		</div>
