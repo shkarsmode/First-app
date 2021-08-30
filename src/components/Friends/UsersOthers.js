@@ -2,6 +2,8 @@ import React from 'react';
 import d from './Friends.module.css';
 
 const UserOthers = (props)=> {
+	// let followAc = () => props.followAc(props.id);
+	let unfollowAc = () => props.unfollowAc(props.id);
 	return (
 		<div className={d.wrap2}>
 			<div className={d.bottom}>
@@ -12,8 +14,8 @@ const UserOthers = (props)=> {
 						<span className={d.message}>{props.years} years old</span>
 						{
 							!props.sub ? 
-							<button className={`${d.sub} ${d.sub2}`}>Add friend</button> :
-							<button className={`${d.sub} ${d.sub2} ${d.foll}`}>Following</button>	
+							<button onClick={() => props.followAc(props.id)} className={`${d.sub} ${d.sub2}`}>Add friend</button> :
+							<button onClick={unfollowAc} className={`${d.sub} ${d.sub2} ${d.foll}`}>Following</button>	
 						}
 					</div>
 				</div>
