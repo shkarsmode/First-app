@@ -11,7 +11,8 @@ let mapStateToProps = (state)=>{
 	return{
 		newPostText: state.profilePage.newPostText,
 		posts: posts,
-		friends: friends
+		friends: friends,
+		friendsCount: friends.length
 	}
 }
 

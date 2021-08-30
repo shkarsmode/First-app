@@ -24,7 +24,7 @@ const MyPage = (props) =>{
 				</div>
 			</div>
 			<div className={`${p.wrap_friends} ${p.block}`}>
-				<div>Friends <span>194</span></div>
+				<div>Friends <span>{props.friendsCount}</span></div>
 				<div className={p.friends}>
 					{friends}
 				</div>
