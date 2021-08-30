@@ -32,8 +32,7 @@ const usersReducer = (state = initialState, action)=>{
 			return {
 				...state, 
 				usersData: state.usersData.map(u=>{
-					debugger;
-					console.log(u.sub);
+					console.log(u);
 					if(action.userId == u.id) return {...u, sub: true}
 					return u;
 				})
@@ -42,8 +41,10 @@ const usersReducer = (state = initialState, action)=>{
 			return {
 				...state, 
 				usersData: state.usersData.map(u=>{
+					console.log(u);
+
 					if(action.userId == u.id)
-						return {...u, sub: false}
+						return {...u, sub:false}
 					return u;
 				})
 			}

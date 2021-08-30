@@ -19,3 +19,4 @@ let rerenderEntireTree = ()=> {
   );
 }
 rerenderEntireTree();
+setTimeout(rerenderEntireTree, 3000);
