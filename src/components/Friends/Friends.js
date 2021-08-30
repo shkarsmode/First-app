@@ -12,9 +12,9 @@ const Users = () => {
 						<span className={d.show}>Show all </span>
 					</div>
 					<div className={d.bottom}>
-						<img className={d.img} src="https://picsum.photos/216" alt="" />
+						<img className={d.img} src="https://picsum.photos/213" alt="" />
 						<div className={d.inf}>
-							<span className={d.name}>Alyona Sumskaya</span>
+							<span className={d.name}>Dmitriy Bondarenko</span>
 							<span className={d.mutual}>Alyona Sumskaya and 8 others mutual friends</span>
 							<div className={d.buttons}><button className={d.sub}>Accept request</button><button className={d.des}>Keep as follower</button></div>
 						</div>
@@ -35,8 +35,10 @@ const Users = () => {
 						</div>
 					</div>
 					<div className={d.friends}>
+
 					<User />
 					<User />
+
 				</div>
 				</div>
 			</div>

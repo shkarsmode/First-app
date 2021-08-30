@@ -336,3 +336,7 @@
 .active2{
 	border-bottom: 0px !important;
 }
+
+.wrap2:last-child .bottom2{
+	display: none;
+}

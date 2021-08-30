@@ -30,6 +30,12 @@ let store = {
 				{name: 'Vika', url: 'https://picsum.photos/238'},
 				{name: 'Jeka', url: 'https://picsum.photos/264'},
 				{name: 'Irina', url: 'https://picsum.photos/274'},]
+		},
+		usersPage:{
+			friendsData: [
+				{id: 10, name: 'Alyona Sumskaya', url: 'https://picsum.photos/236'},
+				{id: 11, name: 'Alexey Kurko', url: 'https://picsum.photos/225'},
+			]
 		}
 	},
 
