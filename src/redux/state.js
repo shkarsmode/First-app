@@ -35,6 +35,9 @@ let store = {
 			friendsData: [
 				{id: 10, name: 'Alyona Sumskaya', url: 'https://picsum.photos/236'},
 				{id: 11, name: 'Alexey Kurko', url: 'https://picsum.photos/225'},
+			],
+			newFriends: [
+				{id: 25, name: 'Dmitriy Bondarenko', url: 'https://picsum.photos/216'}
 			]
 		}
 	},

@@ -1,8 +1,8 @@
 import React from 'react';
 import d from './Friends.module.css';
-import User from './User';
 
-const Users = () => {
+const Users = (props) => {
+	console.log();
 	return (
 		<div className={d.wrap}>
 			<div className={d.first}>
@@ -12,10 +12,10 @@ const Users = () => {
 						<span className={d.show}>Show all </span>
 					</div>
 					<div className={d.bottom}>
-						<img className={d.img} src="https://picsum.photos/213" alt="" />
+						<img className={d.img} src={props.users.url} alt="" />
 						<div className={d.inf}>
-							<span className={d.name}>Dmitriy Bondarenko</span>
-							<span className={d.mutual}>Alyona Sumskaya and 8 others mutual friends</span>
+							<span className={d.name}>{props.users.name}</span>
+							<span className={d.mutual}>{props.users.name} and 8 others mutual friends</span>
 							<div className={d.buttons}><button className={d.sub}>Accept request</button><button className={d.des}>Keep as follower</button></div>
 						</div>
 					</div>
@@ -23,7 +23,7 @@ const Users = () => {
 				<div className={d.block2}>
 					<div className={d.top}>
 						<div className={d.all_online}>
-							<span className={d.active}>All friends <span className={d.req}>194</span></span>
+							<span className={d.active}>All friends <span className={d.req}>{props.friendsCount}</span></span>
 							<span className={d.show}>Friends online</span>
 						</div>
 							<button className={`${d.sub} ${d.sub2}`}>Find friends</button>
@@ -36,8 +36,7 @@ const Users = () => {
 					</div>
 					<div className={d.friends}>
 
-					<User />
-					<User />
+					{props.friends}
 
 				</div>
 				</div>
