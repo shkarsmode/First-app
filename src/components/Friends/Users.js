@@ -23,9 +23,7 @@ const Users = (props) => {
 					<div className={d.top}>
 						<div className={d.all_online}>
 							<span className={d.active}>Other users</span>
-							{/* <span className={d.show}>Friends online</span> */}
 						</div>
-						{/* <NavLink to="/users"><button className={`${d.sub} ${d.sub2}`} >Find friends</button></NavLink>	 */}
 					</div>
 					<div className={d.center}>
 						<div className={`${d.mes} ${d.mesMain}`}>
@@ -34,9 +32,27 @@ const Users = (props) => {
 						</div>
 					</div>
 					<div className={d.friends}>
-
-					{props.usersData}
-
+					{
+						props.usersData.map(el => (
+							<div className={d.wrap2}>
+								<div className={d.bottom}>
+									<img className={d.img} src={el.url} alt="" />
+									<div className={`${d.inf} ${d.inf2}`}>
+										<span className={d.name}>{el.name}</span>
+										<div className={`${d.buttons} ${d.flex}`}>
+											<span className={d.message}>{el.years} years old</span>
+											{
+												!el.sub ? 
+												<button onClick={() => props.followAc(el.id)} className={`${d.sub} ${d.sub2}`}>Add friend</button> :
+												<button onClick={() => props.unfollowAc(el.id)} className={`${d.sub} ${d.sub2} ${d.foll}`}>Following</button>	
+											}
+										</div>
+									</div>
+								</div>
+								<div className={d.bottom2}><div className={d.findlast}></div></div>
+							</div>
+						))
+					}
 				</div>
 				</div>
 			</div>

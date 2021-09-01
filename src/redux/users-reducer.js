@@ -12,7 +12,7 @@ const initialState = {
 			{id: 25, name: 'Dmitriy Bondarenko', url: 'https://picsum.photos/200'}
 		],
 		usersData: [
-			{id: 0, years: 18, name: 'Borya Vykrutasov', sub: false, url: 'https://picsum.photos/150'},
+			{id: 0, years: 18, name: 'Borya Vykrutasov', sub: true, url: 'https://picsum.photos/150'},
 			{id: 1, years: 15, name: 'Marina Vykova', sub: false, url: 'https://picsum.photos/151'},
 			{id: 2, years: 22, name: 'Danya Vykyrdygdanov', sub: false, url: 'https://picsum.photos/152'}
 		]
@@ -20,16 +20,6 @@ const initialState = {
 
 const usersReducer = (state = initialState, action)=>{
 	switch(action.type){
-		// case FOLLOW:
-		// 	debugger;
-		// 	return {
-		// 		...state, 
-		// 		usersData: state.usersData.map(u=>{
-		// 			if(action.userId == u.id) return {...u, sub: true}
-		// 			return u;
-		// 		})
-		// 	}
-
 		case FOLLOW:
 			return {
 				...state, 
@@ -38,27 +28,16 @@ const usersReducer = (state = initialState, action)=>{
 					return u;
 				})
 			}
-		// case FOLLOW:
-		// 	let temp = {
-		// 		...state, 
-		// 		usersData: state.usersData.map(u=>{
-		// 			console.log(u);
-		// 			if(action.userId == u.id)
-		// 				return {...u, sub: true};
-		// 			return u;
-		// 		})
-		// 	}
-		// 	return temp;
 		// case UNFOLLOW: 
 		// 	return {
 		// 		...state, 
 		// 		usersData: state.usersData.map(u=>{
 		// 			if(action.userId == u.id)
-		// 				return {...u, sub:false}
+		// 				return {...u, sub: false}
 		// 			return u;
 		// 		})
 		// 	}
-		default: return state;
+		// default: return state;
 	}
 }
 
