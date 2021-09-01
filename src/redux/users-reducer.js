@@ -1,5 +1,6 @@
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
+const SETUSERS = 'SETUSERS';
 
 const initialState = {
 		friendsData: [
@@ -29,34 +30,41 @@ const usersReducer = (state = initialState, action)=>{
 		// 		})
 		// 	}
 
-		// KAMASUTRA!!! ========================
-
 		case FOLLOW:
 			return {
 				...state, 
 				usersData: state.usersData.map(u=>{
-					console.log(u);
 					if(action.userId == u.id) return {...u, sub: true}
 					return u;
 				})
 			}
-		case UNFOLLOW: 
-			return {
-				...state, 
-				usersData: state.usersData.map(u=>{
-					console.log(u);
-
-					if(action.userId == u.id)
-						return {...u, sub:false}
-					return u;
-				})
-			}
+		// case FOLLOW:
+		// 	let temp = {
+		// 		...state, 
+		// 		usersData: state.usersData.map(u=>{
+		// 			console.log(u);
+		// 			if(action.userId == u.id)
+		// 				return {...u, sub: true};
+		// 			return u;
+		// 		})
+		// 	}
+		// 	return temp;
+		// case UNFOLLOW: 
+		// 	return {
+		// 		...state, 
+		// 		usersData: state.usersData.map(u=>{
+		// 			if(action.userId == u.id)
+		// 				return {...u, sub:false}
+		// 			return u;
+		// 		})
+		// 	}
 		default: return state;
 	}
 }
 
 export const followAC = (userId) => ({type: FOLLOW, userId});
 export const unfollowAC = (userId) => ({type: UNFOLLOW, userId});
+export const setUsersAC = (users) => ({type: SETUSERS, users});
 
 
 export default usersReducer;
