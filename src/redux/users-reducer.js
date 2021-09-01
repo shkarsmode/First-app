@@ -28,16 +28,16 @@ const usersReducer = (state = initialState, action)=>{
 					return u;
 				})
 			}
-		// case UNFOLLOW: 
-		// 	return {
-		// 		...state, 
-		// 		usersData: state.usersData.map(u=>{
-		// 			if(action.userId == u.id)
-		// 				return {...u, sub: false}
-		// 			return u;
-		// 		})
-		// 	}
-		// default: return state;
+		case UNFOLLOW: 
+			return {
+				...state, 
+				usersData: state.usersData.map(u=>{
+					if(action.userId == u.id)
+						return {...u, sub: false}
+					return u;
+				})
+			}
+		default: return state;
 	}
 }
 
