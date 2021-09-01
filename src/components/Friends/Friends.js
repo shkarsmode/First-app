@@ -45,7 +45,7 @@ const Users = (props) => {
 			<div className={d.second}>
 				<div className={`${d.active} ${d.active2}`}>My friends</div>
 				<div>Friend requests</div>
-				<div>Find friends</div>
+				<NavLink to='/users'><div>Find friends</div></NavLink>
 			</div>
 		</div>
 	)

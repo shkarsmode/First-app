@@ -1,6 +1,6 @@
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
-const SETUSERS = 'SETUSERS';
+const SET_USERS = 'SET-USERS';
 
 const initialState = {
 		friendsData: [
@@ -11,11 +11,7 @@ const initialState = {
 		newFriends: [
 			{id: 25, name: 'Dmitriy Bondarenko', url: 'https://picsum.photos/200'}
 		],
-		usersData: [
-			{id: 0, years: 18, name: 'Borya Vykrutasov', sub: true, url: 'https://picsum.photos/150'},
-			{id: 1, years: 15, name: 'Marina Vykova', sub: false, url: 'https://picsum.photos/151'},
-			{id: 2, years: 22, name: 'Danya Vykyrdygdanov', sub: false, url: 'https://picsum.photos/152'}
-		]
+		usersData: []
 };
 
 const usersReducer = (state = initialState, action)=>{
@@ -37,13 +33,18 @@ const usersReducer = (state = initialState, action)=>{
 					return u;
 				})
 			}
+		case SET_USERS:
+			return {
+				...state, 
+				usersData: [...state.usersData, ...action.users]
+			}
 		default: return state;
 	}
 }
 
 export const followAC = (userId) => ({type: FOLLOW, userId});
 export const unfollowAC = (userId) => ({type: UNFOLLOW, userId});
-export const setUsersAC = (users) => ({type: SETUSERS, users});
+export const setUsersAC = (users) => ({type: SET_USERS, users});
 
 
 export default usersReducer;

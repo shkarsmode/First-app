@@ -13,16 +13,12 @@ let mapStateToProps = (state)=>{
 }
 
 let mapDispatchToProps = (dispatch)=>{
-	let followAc = (id) => dispatch(followAC(id));
-	let unfollowAc = (id) => dispatch(unfollowAC(id));
-	let setUsersAc = (users) => dispatch(setUsersAC(users));
-
 	return {
-		followAc: followAc,
-		unfollowAc: unfollowAc,
-		setUsersAc: setUsersAc
+		followAc: id => dispatch(followAC(id)),
+		unfollowAc: id => dispatch(unfollowAC(id)),
+		setUsersAc: users => dispatch(setUsersAC(users))
 	}
-};
+}
 
 const FriendsContainer = connect(mapStateToProps, mapDispatchToProps)(Users);
 

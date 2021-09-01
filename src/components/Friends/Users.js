@@ -1,7 +1,18 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import d from './Friends.module.css';
 
 const Users = (props) => {
+	if(props.usersData.length === 0)
+		props.setUsersAc([
+			{id: 0, years: 18, name: 'Borya Vykrutasov', sub: true, url: 'https://picsum.photos/150'},
+			{id: 1, years: 15, name: 'Marina Vykova', sub: false, url: 'https://picsum.photos/151'},
+			{id: 2, years: 22, name: 'Danya Vykyrdygdanov', sub: false, url: 'https://picsum.photos/152'},
+			{id: 3, years: 22, name: 'Random Chel', sub: false, url: 'https://picsum.photos/136'},
+			{id: 4, years: 22, name: 'Mykola Mynka', sub: false, url: 'https://picsum.photos/135'},
+			{id: 5, years: 22, name: 'Danya Chin', sub: false, url: 'https://picsum.photos/134'}
+		]);
+
 	return (
 		<div className={d.wrap}>
 			<div className={d.first}>
@@ -57,7 +68,7 @@ const Users = (props) => {
 				</div>
 			</div>
 			<div className={d.second}>
-				<div>My friends</div>
+				<NavLink to='/friends'><div>My friends</div></NavLink>
 				<div>Friend requests</div>
 				<div className={`${d.active} ${d.active2}`}>Find friends</div>
 			</div>
