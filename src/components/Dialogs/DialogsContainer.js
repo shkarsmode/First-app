@@ -4,18 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Dialogs from './Dialogs';
 import {connect} from 'react-redux';
 
-// const DialogsContainer = () =>{
-// 	return <StoreContext.Consumer>
-// 		{
-// 			(store)=> {
-// 				let dialogsElements = store.getState().dialogsPage.dialogsData.map(el => (<DiaItem id={el.id} name={el.name} url={el.url}/>));
-// 				return <Dialogs dialogsElements = {dialogsElements}/>
-// 			}
-// 		}
-// 	</StoreContext.Consumer>
-// }
-
-const DiaItem = (props) =>{
+const DiaItem = props => {
 	return(
 		<NavLink to={`/dialogs/id${props.id}`}>
 			<Message name={props.name} url={props.url}/>
@@ -23,7 +12,7 @@ const DiaItem = (props) =>{
 	);
 }
 
-let mapStateToProps=(state)=>{
+let mapStateToProps = state => {
 	let dialogsElements = state.dialogsPage.dialogsData.map(el => (<DiaItem id={el.id} name={el.name} url={el.url}/>));
 	return{
 		dialogsElements: dialogsElements
