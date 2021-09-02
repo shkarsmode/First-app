@@ -3,8 +3,7 @@ import d from './Friends.module.css';
 
 const User = (props)=> {
 	console.log(props);
-	return (
-		<div className={d.wrap2}>
+	return <div className={d.wrap2}>
 			<div className={d.bottom}>
 				<img className={d.img} src={props.url} alt="" />
 				<div className={`${d.inf} ${d.inf2}`}>
@@ -14,7 +13,6 @@ const User = (props)=> {
 			</div>
 			<div className={d.bottom2}><div className={d.findlast}></div></div>
 		</div>
-	)
-};
+}
 
 export default User;

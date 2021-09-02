@@ -21,10 +21,8 @@ const Content = () => {
 				<Route path='/dialogs/:id' render = {() => <MessagesContainer />}/>
 				<Route path='/friends' render = {()=> <FriendsContainer />}/>
 				<Route path='/users' render = {()=> <UsersContainer />}/>
-
 			</div>
 		</div>
-	);
-}
+	)}
 
 export default Content;

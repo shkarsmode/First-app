@@ -48,7 +48,6 @@ const Users = (props) => {
 				<NavLink to='/users'><div>Find friends</div></NavLink>
 			</div>
 		</div>
-	)
-}
+	)}
 
 export default Users;
