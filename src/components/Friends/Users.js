@@ -62,8 +62,7 @@ const Users = (props) => {
 								</div>
 								<div className={d.bottom2}><div className={d.findlast}></div></div>
 							</div>
-						))
-					}
+						))}
 				</div>
 				</div>
 			</div>
@@ -73,7 +72,5 @@ const Users = (props) => {
 				<div className={`${d.active} ${d.active2}`}>Find friends</div>
 			</div>
 		</div>
-	)
-}
-
+	)}
 export default Users;

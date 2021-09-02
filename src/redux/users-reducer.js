@@ -42,9 +42,9 @@ const usersReducer = (state = initialState, action)=>{
 	}
 }
 
-export const followAC = (userId) => ({type: FOLLOW, userId});
-export const unfollowAC = (userId) => ({type: UNFOLLOW, userId});
-export const setUsersAC = (users) => ({type: SET_USERS, users});
+export const followAC = userId => ({type: FOLLOW, userId});
+export const unfollowAC = userId => ({type: UNFOLLOW, userId});
+export const setUsersAC = users => ({type: SET_USERS, users});
 
 
 export default usersReducer;
