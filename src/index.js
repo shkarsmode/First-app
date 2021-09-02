@@ -6,7 +6,7 @@ import store from './redux/redux-state';
 import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
 
-let rerenderEntireTree = ()=> {
+let rerenderEntireTree = () => {
   ReactDOM.render(
 		<BrowserRouter>
       <Provider store={store}>

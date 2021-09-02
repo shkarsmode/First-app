@@ -3,7 +3,7 @@ import m from './Messages.module.css';
 
 let content = React.createRef();
 
-const Messages = (props) =>{
+const Messages = props =>{
 	window.onresize = () => props.onloadOnresize(content);
 	window.onload = ()=> props.onloadOnresize(content);
 

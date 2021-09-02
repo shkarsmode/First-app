@@ -36,7 +36,7 @@ import {connect} from 'react-redux';
 // 		</StoreContext.Consumer>
 // }
 
-let mapStateToProps = (state)=>{
+let mapStateToProps = state => {
 	let messages = state.dialogsPage.messegesData.map(mess => <Message name={mess.name} mess={mess.mess} url={mess.url}/>);
 	return{
 		messages: messages,
@@ -45,7 +45,7 @@ let mapStateToProps = (state)=>{
 	}
 }
 
-let mapDispatchToProps = (dispatch)=>{
+let mapDispatchToProps = dispatch => {
 	let sendMessageHelp = input => dispatch(addMessageCre(input));
 	return{
 		updateMessage: input => dispatch(updateMessageCre(input)),

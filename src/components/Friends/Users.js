@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import d from './Friends.module.css';
 
-const Users = (props) => {
+const Users = props => {
 	if(props.usersData.length === 0)
 		props.setUsersAc([
 			{id: 0, years: 18, name: 'Borya Vykrutasov', sub: true, url: 'https://picsum.photos/150'},

@@ -1,12 +1,12 @@
 import React from 'react';
 import p from './MyPage.module.css';
 
-const MyPage = (props) =>{
+const MyPage = props =>{
 	let posts = props.posts;
 	let friends = props.friends;
 
 	let input = React.createRef();
-	let createPost = (el) => props.createPost(el, input.current.value);
+	let createPost = el => props.createPost(el, input.current.value);
 	let updatePost = () => props.updateNewPostText(input.current.value);
 	
 	return(

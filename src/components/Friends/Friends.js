@@ -2,7 +2,7 @@ import React from 'react';
 import d from './Friends.module.css';
 import { NavLink } from 'react-router-dom';
 
-const Users = (props) => {
+const Users = props => {
 	console.log();
 	return (
 		<div className={d.wrap}>

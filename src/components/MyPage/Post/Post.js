@@ -1,7 +1,7 @@
 import React from 'react';
 import p from './Post.module.css';
 
-const Post = (props) => {
+const Post = props => {
 	return(
 		<div className={props.id ? p.bordNone + ' ' + p.wrap : p.wrap}>
 			<div className={p.img}>

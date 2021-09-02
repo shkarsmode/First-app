@@ -5,7 +5,7 @@ import Post from './Post/Post';
 import Friend from './Friend/Friend';
 import {connect} from 'react-redux';
 
-let mapStateToProps = (state)=>{
+let mapStateToProps = state => {
 	let posts = state.profilePage.postsData.map(post => (<Post id={post.id} title={post.title}/>));
 	let friends = state.profilePage.friendsData.map(friend => (<Friend name={friend.name} url={friend.url}/>));
 	return{
@@ -16,7 +16,7 @@ let mapStateToProps = (state)=>{
 	}
 }
 
-let mapDispatchToProps = (dispatch)=>{
+let mapDispatchToProps = dispatch => {
 	return{
 		updateNewPostText: text => dispatch(updatePostCre(text)),
 		createPost: (el, input)=> {

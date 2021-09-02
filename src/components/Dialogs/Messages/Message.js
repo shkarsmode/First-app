@@ -1,7 +1,7 @@
 import React from 'react';
 import m from './Messages.module.css';
 
-const Message = (props) =>{
+const Message = props =>{
 	return(
 				<div className={m.wrapMes}>
 					<img className={m.img2} src={props.url} alt="" />
