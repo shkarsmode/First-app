@@ -14,7 +14,6 @@ const Content = () => {
 		<div className="wrap-center">
 			<div className="wrap-content">
 				<Nav />
-				{/* <Route path='/' component={MyPage}/> */}
 				<Route path='/profile' render = {() => <MyPageContainer />}/>
 				<Route exact path='/dialogs' render = {() => <DialogsContainer />}/>
 				<Route path='/news' render = {() => <News />}/>
