@@ -11,6 +11,7 @@ let initialState = {
 		{id: 3, name: 'Maks Barishov', url: 'https://picsum.photos/250'},
 		{id: 4, name: 'Olexandr Serdyuk', url: 'https://picsum.photos/270'}],
 	onloadOnresize(content){
+		debugger;
 		if(content.current && window.innerHeight > 300) 
 			content.current.style.height = window.innerHeight-225 + 'px';
 	}

@@ -1,18 +1,17 @@
 import React from 'react';
 import m from './Messages.module.css';
 
-let content = React.createRef();
-
-const Messages = props =>{
-	window.onresize = () => props.onloadOnresize(content);
-	window.onload = ()=> props.onloadOnresize(content);
+const Messages = props => {
+	let content = React.createRef();
+	// window.onresize = () => props.onloadOnresize(content);
+	// window.onload = () => props.onloadOnresize(content);
 
 	let messages = props.messages;
 
 	let input = React.createRef();
-	let sendMessage = ()=> props.sendMessage(input.current.value);
-	let sendMessage2 = (el)=>	props.sendMessage2(el, input.current.value);
-	let updateMessage = ()=> props.updateMessage(input.current.value);
+	let sendMessage = () => props.sendMessage(input.current.value);
+	let sendMessage2 = el =>	props.sendMessage2(el, input.current.value);
+	let updateMessage = () => props.updateMessage(input.current.value);
 
 	return(
 		<div className={m.wrap}>
