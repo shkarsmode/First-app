@@ -6,7 +6,7 @@ import avatar from '../../avatar.png';
 
 const Users = props => {
 	if(props.usersData.length === 0)
-		axios.get('https://social-network.samuraijs.com/api/1.0/users?page=25').then(response => {
+		axios.get('https://social-network.samuraijs.com/api/1.0/users?page=1300').then(response => {
 			debugger;
 			props.setUsersAc(response.data.items);
 		});
