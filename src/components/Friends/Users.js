@@ -1,17 +1,15 @@
+import axios from 'axios';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import d from './Friends.module.css';
+import avatar from '../../avatar.png';
 
 const Users = props => {
 	if(props.usersData.length === 0)
-		props.setUsersAc([
-			{id: 0, years: 18, name: 'Borya Vykrutasov', sub: true, url: 'https://picsum.photos/150'},
-			{id: 1, years: 15, name: 'Marina Vykova', sub: false, url: 'https://picsum.photos/151'},
-			{id: 2, years: 22, name: 'Danya Vykyrdygdanov', sub: false, url: 'https://picsum.photos/152'},
-			{id: 3, years: 22, name: 'Random Chel', sub: false, url: 'https://picsum.photos/136'},
-			{id: 4, years: 22, name: 'Mykola Mynka', sub: false, url: 'https://picsum.photos/135'},
-			{id: 5, years: 22, name: 'Danya Chin', sub: false, url: 'https://picsum.photos/134'}
-		]);
+		axios.get('https://social-network.samuraijs.com/api/1.0/users?page=25').then(response => {
+			debugger;
+			props.setUsersAc(response.data.items);
+		});
 
 	return (
 		<div className={d.wrap}>
@@ -47,11 +45,14 @@ const Users = props => {
 						props.usersData.map(el => (
 							<div className={d.wrap2}>
 								<div className={d.bottom}>
-									<img className={d.img} src={el.url} alt="" />
+									<img className={d.img} src={
+										!el.photos.small ? avatar : el.photos.small
+									}
+										alt="" />
 									<div className={`${d.inf} ${d.inf2}`}>
 										<span className={d.name}>{el.name}</span>
 										<div className={`${d.buttons} ${d.flex}`}>
-											<span className={d.message}>{el.years} years old</span>
+											<span className={d.message}>15 years old</span>
 											{
 												!el.sub ? 
 												<button onClick={() => props.followAc(el.id)} className={`${d.sub} ${d.sub2}`}>Add friend</button> :
