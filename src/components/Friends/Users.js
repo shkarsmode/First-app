@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom';
 import d from './Friends.module.css';
 import avatar from '../../avatar.png';
 
-
 class Users extends React.Component {
 	
 	constructor(props){
 		super(props);
-		axios.get('https://social-network.samuraijs.com/api/1.0/users?page=1300').then(response => props.setUsersAc(response.data.items));
+		axios.get('https://social-network.samuraijs.com/api/1.0/users?page=1300').then(
+			response => props.setUsersAc(response.data.items));
 	}
 
 	render() {
