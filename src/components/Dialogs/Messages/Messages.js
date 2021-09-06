@@ -17,7 +17,7 @@ const Messages = props => {
 		<div className={m.wrap}>
 			<div className={m.top}>
 				<div>Back</div>
-				<div className="">Vitalya Grudkin</div>
+				<div className="">Vitalya Grudkin</div> 
 				<img className={m.img} src="https://sun6-21.userapi.com/s/v1/ig2/SI1A798_pthScrGRkZCxEB4D043GniGk_YSClHzTs2rNRkznkfdOszD6ek33bvUc45Er2ghnLSvDi-t-Ej_iCEnd.jpg?size=50x0&quality=96&crop=96,96,768,768&ava=1" alt="" />
 			</div>
 				<div className={m.content} ref={content}>
