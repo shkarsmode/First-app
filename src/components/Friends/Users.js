@@ -10,9 +10,18 @@ class Users extends React.Component {
 		axios.get('https://social-network.samuraijs.com/api/1.0/users?page=1300').then(
 			response => this.props.setUsersAc(response.data.items));
 	}
+
 	render() {
+		let pagesCount = this.props.totalUsersCount / this.props.pageSize;
+		let pages = [];
+		for(let i = 1; i <= pagesCount; i++)
+			pages.push(i);
+		console.log(pages);
 		return (
 			<div className={d.wrap}>
+				{pages.map(p => {
+					return <span className>{p}</span> // PAGINATION
+				})}
 				<div className={d.first}>
 					<div className={d.block}>
 						<div className={d.top}>
