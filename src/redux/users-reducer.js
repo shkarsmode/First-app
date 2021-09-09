@@ -14,6 +14,7 @@ const initialState = {
 		usersData: [],
 		pageSize: 5,
 		totalUsersCount: 25
+		
 };
 
 const usersReducer = (state = initialState, action)=>{
