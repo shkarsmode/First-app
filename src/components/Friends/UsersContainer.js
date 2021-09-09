@@ -11,7 +11,6 @@ let mapStateToProps = (state)=>{
 		usersData: usersData,
 		pageSize: state.usersPage.pageSize,
 		totalUsersCount: state.usersPage.totalUsersCount
-		
 	}
 }
 
