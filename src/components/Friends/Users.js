@@ -10,7 +10,6 @@ class Users extends React.Component {
 		axios.get('https://social-network.samuraijs.com/api/1.0/users?page=1300').then(
 			response => this.props.setUsersAc(response.data.items));
 	}
-
 	render() {
 		return (
 			<div className={d.wrap}>

@@ -11,7 +11,9 @@ const initialState = {
 		newFriends: [
 			{id: 25, name: 'Dmitriy Bondarenko', url: 'https://picsum.photos/200'}
 		],
-		usersData: []
+		usersData: [],
+		pageSize: 5,
+		totalUsersCount: 0
 };
 
 const usersReducer = (state = initialState, action)=>{

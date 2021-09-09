@@ -8,7 +8,8 @@ let mapStateToProps = (state)=>{
 	let users = state.usersPage.newFriends[0];
 	return{
 		users: users,
-		usersData: usersData
+		usersData: usersData,
+		pageSize: state.usersPage.pageSize
 	}
 }
 
