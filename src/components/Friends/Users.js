@@ -20,7 +20,7 @@ class Users extends React.Component {
 		return (
 			<div className={d.wrap}>
 				{pages.map(p => {
-					return <span className>{p}</span> // PAGINATION
+					return <span className={this.props.usersData.currentPage === p ? d.activePag : ''}>{p}</span>
 				})}
 				<div className={d.first}>
 					<div className={d.block}>

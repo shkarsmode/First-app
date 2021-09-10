@@ -357,3 +357,7 @@
 	background-color: #dfe6ed;
 	color: #7a889a;
 }
+
+.activePag{
+	font-weight: bold;
+}
