@@ -12,16 +12,13 @@ class Users extends React.Component {
 	}
 
 	render() {
-		let pagesCount = this.props.totalUsersCount / this.props.pageSize;
+		let pagesCount = Math.ceil(this.props.totalUsersCount / this.props.pageSize);
 		let pages = [];
 		for(let i = 1; i <= pagesCount; i++)
 			pages.push(i);
 		console.log(pages);
 		return (
 			<div className={d.wrap}>
-				{pages.map(p => {
-					return <span className={this.props.usersData.currentPage === p ? d.activePag : ''}>{p}</span>
-				})}
 				<div className={d.first}>
 					<div className={d.block}>
 						<div className={d.top}>
@@ -75,6 +72,11 @@ class Users extends React.Component {
 							))}
 					</div>
 					</div>
+					<div className={d.pagination}>
+						{pages.map(p => (
+							<span className={this.props.currentPage == p ? d.activePag : d.unactivePag}>{p}</span>
+						))}
+				</div>
 				</div>
 				<div className={d.second}>
 					<NavLink to='/friends'><div>My friends</div></NavLink>
