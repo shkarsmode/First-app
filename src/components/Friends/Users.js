@@ -4,7 +4,6 @@ import d from './Friends.module.css';
 import avatar from '../../avatar.png';
 
 let Users = props => {
-
 	let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 	for(let i = 1; i <= pagesCount; i++)
 		props.pages.push(i);
