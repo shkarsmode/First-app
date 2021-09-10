@@ -8,7 +8,9 @@ class Users extends React.Component {
 
 	componentDidMount(){
 		axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(
-			response => this.props.setUsersAc(response.data.items));
+			response => {
+				this.props.setUsersAc(response.data.items, response.data.totalCount)
+			});
 	}
 
 	render() {
@@ -21,8 +23,7 @@ class Users extends React.Component {
 			this.props.setCurrentPageAc(p);
 			if(this.props.currentPage != p)
 				axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${p}&count=${this.props.pageSize}`).then(
-					response => this.props.setUsersAc(response.data.items));
-
+					response => this.props.setUsersAc(response.data.items, response.data.totalCount));
 		}
 
 		return (

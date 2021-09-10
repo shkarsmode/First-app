@@ -19,7 +19,7 @@ let mapDispatchToProps = (dispatch)=>{
 	return {
 		followAc: id => dispatch(followAC(id)),
 		unfollowAc: id => dispatch(unfollowAC(id)),
-		setUsersAc: users => dispatch(setUsersAC(users)),
+		setUsersAc: (users, count) => dispatch(setUsersAC(users, count)),
 		setCurrentPageAc: page => dispatch(setCurrentPageAC(page))
 	}
 }
