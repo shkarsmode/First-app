@@ -365,7 +365,6 @@
 	align-items: center;
 	width: 100%;
 	height: 50px;
-	margin: 15px 0;
 	column-gap: 20px;
 	margin-bottom: 50px;
 	
@@ -374,8 +373,24 @@
 .activePag{
 	font-weight: bold;
 	cursor: pointer;
+	color: #5181b8;
 }
 .unactivePag{
 	font-weight: normal;
 	cursor: pointer;
+
+	color: #5181b8;
+}
+
+.unactivePag:hover{
+	color: white;
+
+}
+
+.activePag, .unactivePag{
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+	width: 20px;
+	height: 25px;
 }

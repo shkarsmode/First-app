@@ -7,7 +7,7 @@ import avatar from '../../avatar.png';
 class Users extends React.Component {
 
 	componentDidMount(){
-		axios.get('https://social-network.samuraijs.com/api/1.0/users?page=1300').then(
+		axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(
 			response => this.props.setUsersAc(response.data.items));
 	}
 
@@ -16,7 +16,15 @@ class Users extends React.Component {
 		let pages = [];
 		for(let i = 1; i <= pagesCount; i++)
 			pages.push(i);
-		console.log(pages);
+
+		let onPageChanged = p => {
+			this.props.setCurrentPageAc(p);
+			if(this.props.currentPage != p)
+				axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${p}&count=${this.props.pageSize}`).then(
+					response => this.props.setUsersAc(response.data.items));
+
+		}
+
 		return (
 			<div className={d.wrap}>
 				<div className={d.first}>
@@ -74,7 +82,7 @@ class Users extends React.Component {
 					</div>
 					<div className={d.pagination}>
 						{pages.map(p => (
-							<span className={this.props.currentPage == p ? d.activePag : d.unactivePag}>{p}</span>
+							<span onClick={() => onPageChanged(p)} className={this.props.currentPage == p ? d.activePag : d.unactivePag}>{p}</span>
 						))}
 				</div>
 				</div>
