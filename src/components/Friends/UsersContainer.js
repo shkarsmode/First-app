@@ -10,7 +10,7 @@ class UsersContainer extends React.Component {
 		axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(
 			response => {
 				this.props.setUsersAc(response.data.items, response.data.totalCount)
-			});
+		});
 	}
 
 	onPageChanged = p => {
@@ -21,7 +21,6 @@ class UsersContainer extends React.Component {
 	}
 
 	pages = [];
-
 	render() {
 		return <Users users = {this.props.users}
 									usersData = {this.props.usersData}
@@ -32,8 +31,7 @@ class UsersContainer extends React.Component {
 									unfollowAc = {this.props.unfollowAc}
 									setUsersAc = {this.props.setUsersAc}
 									onPageChanged = {this.onPageChanged}
-									pages = {this.pages}
-						/>
+									pages = {this.pages} />
 	}
 }
 
