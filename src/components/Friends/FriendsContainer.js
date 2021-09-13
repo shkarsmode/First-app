@@ -15,5 +15,4 @@ let mapStateToProps = state => {
 
 const FriendsContainer = connect(mapStateToProps)(Friends);
 
-
 export default FriendsContainer;

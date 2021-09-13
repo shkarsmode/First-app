@@ -3,7 +3,6 @@ import d from './Friends.module.css';
 import { NavLink } from 'react-router-dom';
 
 const Users = props => {
-	console.log();
 	return (
 		<div className={d.wrap}>
 			<div className={d.first}>
@@ -36,9 +35,7 @@ const Users = props => {
 						</div>
 					</div>
 					<div className={d.friends}>
-
-					{props.friends}
-
+						{props.friends}
 				</div>
 				</div>
 			</div>
