@@ -45,10 +45,8 @@ const usersReducer = (state = initialState, action) => {
 				usersData: [...action.users],
 				totalUsersCount: action.count
 			}
-		case SET_CURRENT_PAGE:
-			return { ...state, currentPage: action.page }
-		case TOGGLE_IS_FETCHING:
-			return { ...state, isFetching: action.isfetching}
+		case SET_CURRENT_PAGE: return { ...state, currentPage: action.page }
+		case TOGGLE_IS_FETCHING: return { ...state, isFetching: action.isfetching }
 		default: return state;
 	}
 }

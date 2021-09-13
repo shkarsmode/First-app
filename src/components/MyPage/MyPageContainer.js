@@ -3,12 +3,12 @@ import { addPostCre, updatePostCre } from '../../redux/post-reducer';
 import MyPage from './MyPage';
 import Post from './Post/Post';
 import Friend from './Friend/Friend';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 let mapStateToProps = state => {
-	let posts = state.profilePage.postsData.map(post => (<Post id={post.id} title={post.title}/>));
-	let friends = state.profilePage.friendsData.map(friend => (<Friend name={friend.name} url={friend.url}/>));
-	return{
+	let posts = state.profilePage.postsData.map(post => (<Post id={post.id} title={post.title} />));
+	let friends = state.profilePage.friendsData.map(friend => (<Friend name={friend.name} url={friend.url} />));
+	return {
 		newPostText: state.profilePage.newPostText,
 		posts: posts,
 		friends: friends,
@@ -17,11 +17,11 @@ let mapStateToProps = state => {
 }
 
 let mapDispatchToProps = dispatch => {
-	return{
+	return {
 		updateNewPostText: text => dispatch(updatePostCre(text)),
-		createPost: (el, input)=> {
-			if(el.code == "Enter" && input != '')
-					dispatch(addPostCre());
+		createPost: (el, input) => {
+			if (el.code == "Enter" && input != '')
+				dispatch(addPostCre());
 		}
 	}
 }

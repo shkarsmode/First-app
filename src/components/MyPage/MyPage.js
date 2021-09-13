@@ -1,16 +1,15 @@
 import React from 'react';
 import p from './MyPage.module.css';
 
-const MyPage = props =>{
+const MyPage = props => {
 	let posts = props.posts;
 	let friends = props.friends;
 
 	let input = React.createRef();
 	let createPost = el => props.createPost(el, input.current.value);
-	let updatePost = () => props.updateNewPostText(input.current.value);
-	
-	return(
-	<div className={p.content}>
+	let updatePost = el => props.updateNewPostText(input.current.value);
+
+	return <div className={p.content}>
 		<div className={p.left}>
 			<div className={`${p.img} ${p.block}`}>
 				<div className={p.img_inner}>
@@ -61,7 +60,7 @@ const MyPage = props =>{
 			</div>
 			<div className={`${p.post} ${p.block}`}>
 				<img src='https://sun6-23.userapi.com/s/v1/if2/O5q4KiqYj9GmUQ8_M-7ocdXaSextWXONCFg2jb3cd3-KviAuvoEe83nQ3FhI2ncbUFqGRBquxUU4mywCX5qDLrCC.jpg?size=50x0&quality=96&crop=223,142,626,626&ava=1'></img>
-				<input className={p.input} onChange={updatePost} value={props.newPostText} onKeyDown={createPost} ref={input} placeholder="What's new?"/>
+				<input className={p.input} onChange={updatePost} value={props.newPostText} onKeyDown={createPost} ref={input} placeholder="What's new?" />
 			</div>
 			<div className={`${p.posts} ${p.block}`}>
 				<div className={p.post_top}>
@@ -73,10 +72,8 @@ const MyPage = props =>{
 			<div className={p.flex}>
 				{posts}
 			</div>
-
 		</div>
 	</div>
-);
 }
 
 export default MyPage;
