@@ -394,3 +394,21 @@
 	width: 20px;
 	height: 25px;
 }
+
+.load, .loadSmall{
+	background-color: #efefef;
+	width: 150px;
+	height: 15px;
+	border-radius: 4px;
+}
+
+.loadSmall{
+	width: 100px;
+}
+
+.loadImg{
+	background-color: #efefef;
+	width: 100px;
+	height: 80px;
+	border-radius: 50%;
+}

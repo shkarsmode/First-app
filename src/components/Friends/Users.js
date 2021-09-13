@@ -2,12 +2,13 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 import d from './Friends.module.css';
 import avatar from '../../avatar.png';
+import UserLoad from './UserLoad';
 
 let Users = props => {
 	let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 	for(let i = 1; i <= pagesCount; i++)
 		props.pages.push(i);
-		
+
 	return <div className={d.wrap}>
 			<div className={d.first}>
 				<div className={d.block}>
@@ -37,7 +38,17 @@ let Users = props => {
 						</div>
 					</div>
 					<div className={d.friends}>
+											
 					{
+						props.isFetching ?
+						<>
+							<UserLoad />
+							<UserLoad />
+							<UserLoad />
+							<UserLoad />
+							<UserLoad />
+						</>
+						: 
 						props.usersData.map(el => (
 							<div className={d.wrap2}>
 								<div className={d.bottom}>

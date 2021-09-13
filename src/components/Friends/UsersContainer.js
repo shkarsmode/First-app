@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {followAC, unfollowAC, setUsersAC, setCurrentPageAC} from '../../redux/users-reducer';
+import {followAC, unfollowAC, setUsersAC, setCurrentPageAC, toggleIsFetchingAC} from '../../redux/users-reducer';
 import React from 'react';
 import Users from './Users';
 import * as axios from 'axios';
@@ -7,17 +7,23 @@ import * as axios from 'axios';
 class UsersContainer extends React.Component {
 
 	componentDidMount(){
+		this.props.toggleIsFetchingAC(true);
 		axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(
 			response => {
-				this.props.setUsersAc(response.data.items, response.data.totalCount)
+				this.props.toggleIsFetchingAC(false);
+				this.props.setUsersAc(response.data.items, response.data.totalCount);
 		});
 	}
 
 	onPageChanged = p => {
+		this.props.toggleIsFetchingAC(true);
 		this.props.setCurrentPageAc(p);
 		if(this.props.currentPage != p)
 			axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${p}&count=${this.props.pageSize}`).then(
-				response => this.props.setUsersAc(response.data.items, response.data.totalCount));
+				response => {
+					this.props.toggleIsFetchingAC(false);
+					this.props.setUsersAc(response.data.items, response.data.totalCount);
+				});
 	}
 
 	pages = [];
@@ -31,7 +37,9 @@ class UsersContainer extends React.Component {
 									unfollowAc = {this.props.unfollowAc}
 									setUsersAc = {this.props.setUsersAc}
 									onPageChanged = {this.onPageChanged}
-									pages = {this.pages} />
+									pages = {this.pages} 
+									isFetching = {this.props.isFetching}
+									/>
 	}
 }
 
@@ -44,7 +52,8 @@ let mapStateToProps = (state)=>{
 		usersData: usersData,
 		pageSize: state.usersPage.pageSize,
 		totalUsersCount: state.usersPage.totalUsersCount,
-		currentPage: state.usersPage.currentPage
+		currentPage: state.usersPage.currentPage,
+		isFetching: state.usersPage.isFetching
 	}
 }
 
@@ -53,7 +62,8 @@ let mapDispatchToProps = (dispatch)=>{
 		followAc: id => dispatch(followAC(id)),
 		unfollowAc: id => dispatch(unfollowAC(id)),
 		setUsersAc: (users, count) => dispatch(setUsersAC(users, count)),
-		setCurrentPageAc: page => dispatch(setCurrentPageAC(page))
+		setCurrentPageAc: page => dispatch(setCurrentPageAC(page)),
+		toggleIsFetchingAC: bool => dispatch(toggleIsFetchingAC(bool))
 	}
 }
 
