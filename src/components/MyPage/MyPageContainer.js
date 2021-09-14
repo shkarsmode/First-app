@@ -1,5 +1,5 @@
 import React from 'react';
-import { addPostCre, updatePostCre } from '../../redux/post-reducer';
+import { addPost, updatePost } from '../../redux/post-reducer';
 import MyPage from './MyPage';
 import Post from './Post/Post';
 import Friend from './Friend/Friend';
@@ -18,10 +18,10 @@ let mapStateToProps = state => {
 
 let mapDispatchToProps = dispatch => {
 	return {
-		updateNewPostText: text => dispatch(updatePostCre(text)),
+		updateNewPostText: text => dispatch(updatePost(text)),
 		createPost: (el, input) => {
 			if (el.code == "Enter" && input != '')
-				dispatch(addPostCre());
+				dispatch(addPost());
 		}
 	}
 }

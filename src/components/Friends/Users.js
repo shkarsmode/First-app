@@ -62,8 +62,8 @@ let Users = props => {
 												<span className={d.message}>15 years old</span>
 												{
 													!el.sub ?
-														<button onClick={() => props.followAc(el.id)} className={`${d.sub} ${d.sub2}`}>Add friend</button> :
-														<button onClick={() => props.unfollowAc(el.id)} className={`${d.sub} ${d.sub2} ${d.foll}`}>Following</button>
+														<button onClick={() => props.follow(el.id)} className={`${d.sub} ${d.sub2}`}>Add friend</button> :
+														<button onClick={() => props.unfollow(el.id)} className={`${d.sub} ${d.sub2} ${d.foll}`}>Following</button>
 												}
 											</div>
 										</div>
