@@ -30,7 +30,7 @@ const dialogsReducer = (state = initialState, action) => {
 	}
 }
 
-export let addMessageCre = mess => ({ type: ADD_MESSAGE, mess });
-export let updateMessageCre = text => ({ type: UPDATE_MESSAGE, text });
+export let addMessage = mess => ({ type: ADD_MESSAGE, mess });
+export let updateMessage = text => ({ type: UPDATE_MESSAGE, text });
 export default dialogsReducer;
 
