@@ -27,5 +27,4 @@ let mapDispatchToProps = dispatch => {
 }
 
 const MyPageContainer = connect(mapStateToProps, mapDispatchToProps)(MyPage);
-
 export default MyPageContainer;
