@@ -63,7 +63,7 @@ let Users = props => {
 												<span className={d.name}>{el.name}</span>
 											</NavLink>
 											<div className={`${d.buttons} ${d.flex}`}>
-												<span className={d.message}>15 years old</span>
+												<span className={d.message}>16 years old</span>
 												{
 													!el.sub ?
 														<button onClick={() => props.follow(el.id)} className={`${d.sub} ${d.sub2}`}>Add friend</button> :
