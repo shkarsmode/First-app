@@ -52,12 +52,16 @@ let Users = props => {
 							props.usersData.map(el => (
 								<div className={d.wrap2}>
 									<div className={d.bottom}>
-										<img className={d.img} src={
-											!el.photos.small ? avatar : el.photos.small
-										}
-											alt="" />
+										<NavLink to={`/profile/id${el.id}`}>
+											<img className={d.img} src={
+												!el.photos.small ? avatar : el.photos.small
+											}
+												alt="" />
+										</NavLink>
 										<div className={`${d.inf} ${d.inf2}`}>
-											<span className={d.name}>{el.name}</span>
+											<NavLink to={`/profile/id${el.id}`}>
+												<span className={d.name}>{el.name}</span>
+											</NavLink>
 											<div className={`${d.buttons} ${d.flex}`}>
 												<span className={d.message}>15 years old</span>
 												{
