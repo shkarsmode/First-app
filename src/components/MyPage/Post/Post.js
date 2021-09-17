@@ -2,12 +2,12 @@ import React from 'react';
 import p from './Post.module.css';
 
 const Post = props => {
-	return(
+	return (
 		<div className={props.id ? p.bordNone + ' ' + p.wrap : p.wrap}>
 			<div className={p.img}>
-				<img src="https://sun6-23.userapi.com/s/v1/if2/O5q4KiqYj9GmUQ8_M-7ocdXaSextWXONCFg2jb3cd3-KviAuvoEe83nQ3FhI2ncbUFqGRBquxUU4mywCX5qDLrCC.jpg?size=50x0&quality=96&crop=223,142,626,626&ava=1" alt="" />
+				<img src={props.userProfile.photos.small} alt="" className={p.imgSmall} />
 				<div>
-					Daniil Shkarupa
+					{props.userProfile.fullName}
 					<span>29 mitunes ago</span>
 				</div>
 			</div>

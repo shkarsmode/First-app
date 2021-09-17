@@ -10,10 +10,7 @@ class MyPageContainer2 extends React.Component {
 
 	componentDidMount() {
 		axios.get(`https://social-network.samuraijs.com/api/1.0/profile/2`).then(
-			response => {
-				this.props.setUserProfile(response.data);
-			});
-
+			response => this.props.setUserProfile(response.data));
 	}
 
 	render() {
@@ -30,7 +27,12 @@ class MyPageContainer2 extends React.Component {
 }
 
 let mapStateToProps = state => {
-	let posts = state.profilePage.postsData.map(post => (<Post id={post.id} title={post.title} />));
+	let posts = state.profilePage.postsData.map(post => (<Post
+		id={post.id}
+		title={post.title}
+		userProfile={state.profilePage.userProfile}
+	/>));
+
 	let friends = state.profilePage.friendsData.map(friend => (<Friend name={friend.name} url={friend.url} />));
 	return {
 		newPostText: state.profilePage.newPostText,
