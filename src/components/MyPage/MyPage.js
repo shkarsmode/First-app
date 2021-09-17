@@ -9,11 +9,13 @@ const MyPage = props => {
 	let createPost = el => props.createPost(el, input.current.value);
 	let updatePost = el => props.updateNewPostText(input.current.value);
 
+	if (!props.userProfile) return <div>null</div>
+	let user = props.userProfile;
 	return <div className={p.content}>
 		<div className={p.left}>
 			<div className={`${p.img} ${p.block}`}>
 				<div className={p.img_inner}>
-					<img src='https://sun6-23.userapi.com/s/v1/if2/ZcXrYTBCwdfoqSK8VUWqFdAkaUS3yxQMBsScFnSdcJf6dRbHJKGG6Id8fVlMG0YQz1iC_geE_LhKNJJWBoEOZppU.jpg?size=200x0&quality=96&crop=223,142,626,626&ava=1'></img>
+					<img src={user.photos.large} className={p.imgMain}></img>
 				</div>
 				<div className={p.edit}>Edit</div>
 				<div className={p.spec}>
@@ -32,8 +34,8 @@ const MyPage = props => {
 		<div className={p.right}>
 			<div className={`${p.descr} ${p.block}`}>
 				<div className={p.top}>
-					<div className={p.name}>Daniil Shkarupa<span>last seen 10 minutes ago</span></div>
-					<div className={p.status}>Set status</div>
+					<div className={p.name}>{user.fullName}<span>last seen 10 minutes ago</span></div>
+					<div className={p.status}>{user.aboutMe}</div>
 					<div className={p.inf}>
 						<table>
 							<tr>

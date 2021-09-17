@@ -1,5 +1,6 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
+const SET_USER_PROFILE = 'SET-USER-PROFILE';
 
 let initialState = {
 	postsData: [
@@ -12,7 +13,8 @@ let initialState = {
 		{ name: 'Vadim', url: 'https://picsum.photos/237' },
 		{ name: 'Vika', url: 'https://picsum.photos/238' },
 		{ name: 'Jeka', url: 'https://picsum.photos/264' },
-		{ name: 'Irina', url: 'https://picsum.photos/274' },]
+		{ name: 'Irina', url: 'https://picsum.photos/274' },],
+	userProfile: null
 };
 
 const postReducer = (state = initialState, action) => {
@@ -24,11 +26,13 @@ const postReducer = (state = initialState, action) => {
 				newPostText: ''
 			}
 		case UPDATE_POST_TEXT: return { ...state, newPostText: action.text }
+		case SET_USER_PROFILE: return { ...state, userProfile: action.data }
 		default: return state;
 	}
 }
 
 export let addPost = () => ({ type: ADD_POST });
 export let updatePost = text => ({ type: UPDATE_POST_TEXT, text });
+export let setUserProfile = data => ({ type: SET_USER_PROFILE, data })
 export default postReducer;
 
