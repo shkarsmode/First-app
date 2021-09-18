@@ -55,8 +55,7 @@ let Users = props => {
 										<NavLink to={`/profile/id${el.id}`}>
 											<img className={d.img} src={
 												!el.photos.small ? avatar : el.photos.small
-											}
-												alt="" />
+											} />
 										</NavLink>
 										<div className={`${d.inf} ${d.inf2}`}>
 											<NavLink to={`/profile/id${el.id}`}>
@@ -74,7 +73,8 @@ let Users = props => {
 									</div>
 									<div className={d.bottom2}><div className={d.findlast}></div></div>
 								</div>
-							))}
+							))
+					}
 				</div>
 			</div>
 			<div className={d.pagination}>
