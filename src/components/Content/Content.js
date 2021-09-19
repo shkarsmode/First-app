@@ -15,6 +15,7 @@ const Content = () => {
 			<div className="wrap-content">
 				<Nav />
 				<Route path='/profile/:id?' render={() => <MyPageContainer />} />
+				<Route path='/myProfile' render={() => <MyPageContainer />} />
 				<Route exact path='/dialogs' render={() => <DialogsContainer />} />
 				<Route path='/news' render={() => <News />} />
 				<Route path='/dialogs/:id' render={() => <MessagesContainer />} />
