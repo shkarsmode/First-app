@@ -8,7 +8,6 @@ const MyPage = props => {
 	let input = React.createRef();
 	let createPost = el => props.createPost(el, input.current.value);
 	let updatePost = el => props.updateNewPostText(input.current.value);
-
 	if (!props.userProfile) return <div>null</div>
 	let user = props.userProfile;
 	return <div className={p.content}>

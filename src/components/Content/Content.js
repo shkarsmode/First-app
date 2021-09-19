@@ -10,18 +10,19 @@ import FriendsContainer from '../Friends/FriendsContainer';
 import UsersContainer from '../Friends/UsersContainer';
 
 const Content = () => {
-	return(
+	return (
 		<div className="wrap-center">
 			<div className="wrap-content">
 				<Nav />
-				<Route path='/profile' render = {() => <MyPageContainer />}/>
-				<Route exact path='/dialogs' render = {() => <DialogsContainer />}/>
-				<Route path='/news' render = {() => <News />}/>
-				<Route path='/dialogs/:id' render = {() => <MessagesContainer />}/>
-				<Route path='/friends' render = {()=> <FriendsContainer />}/>
-				<Route path='/users' render = {()=> <UsersContainer />}/>
+				<Route path='/profile/:id?' render={() => <MyPageContainer />} />
+				<Route exact path='/dialogs' render={() => <DialogsContainer />} />
+				<Route path='/news' render={() => <News />} />
+				<Route path='/dialogs/:id' render={() => <MessagesContainer />} />
+				<Route path='/friends' render={() => <FriendsContainer />} />
+				<Route path='/users' render={() => <UsersContainer />} />
 			</div>
 		</div>
-	)}
+	)
+}
 
 export default Content;

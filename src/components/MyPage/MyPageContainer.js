@@ -5,11 +5,12 @@ import Post from './Post/Post';
 import Friend from './Friend/Friend';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import { withRouter } from 'react-router';
 
 class MyPageContainer2 extends React.Component {
-
 	componentDidMount() {
-		axios.get(`https://social-network.samuraijs.com/api/1.0/profile/2`).then(
+		let userId = this.props.match.params.id ? this.props.match.params.id.slice(2) : 2;
+		axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`).then(
 			response => this.props.setUserProfile(response.data));
 	}
 
@@ -56,5 +57,7 @@ let mapDispatchToProps = dispatch => {
 	}
 }
 
-const MyPageContainer = connect(mapStateToProps, mapDispatchToProps)(MyPageContainer2);
+let MyPageUrlDataContainer = withRouter(MyPageContainer2);
+
+const MyPageContainer = connect(mapStateToProps, mapDispatchToProps)(MyPageUrlDataContainer);
 export default MyPageContainer;
