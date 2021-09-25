@@ -9,13 +9,13 @@ import DialogsContainer from '../Dialogs/DialogsContainer';
 import FriendsContainer from '../Friends/FriendsContainer';
 import UsersContainer from '../Friends/UsersContainer';
 
-const Content = () => {
+const Content = props => {
 	return (
 		<div className="wrap-center">
 			<div className="wrap-content">
-				<Nav />
+				<Nav id={props.id} />
 				<Route path='/profile/:id?' render={() => <MyPageContainer />} />
-				<Route path='/myProfile' render={() => <MyPageContainer />} />
+				{/* <Route path='/profile/' render={() => <MyPageContainer />} /> */}
 				<Route exact path='/dialogs' render={() => <DialogsContainer />} />
 				<Route path='/news' render={() => <News />} />
 				<Route path='/dialogs/:id' render={() => <MessagesContainer />} />
