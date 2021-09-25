@@ -9,9 +9,10 @@ import { withRouter } from 'react-router';
 
 class MyPageContainer2 extends React.Component {
 	componentDidMount() {
-		let userId = this.props.match.params.id ? this.props.match.params.id.slice(2) : 2;
-		axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`).then(
+		let id = this.props.match.params.id ? this.props.match.params.id.slice(2) : this.props.id;
+		axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${id}`).then(
 			response => this.props.setUserProfile(response.data));
+
 	}
 
 	render() {
@@ -42,7 +43,8 @@ let mapStateToProps = state => {
 		posts: posts,
 		friends: friends,
 		friendsCount: friends.length,
-		userProfile: state.profilePage.userProfile
+		userProfile: state.profilePage.userProfile,
+		id: state.auth.id
 	}
 }
 

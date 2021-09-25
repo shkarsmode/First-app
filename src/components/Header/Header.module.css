@@ -43,6 +43,14 @@
 	width: 32px;
 }
 
+a{
+	color: black;
+	text-decoration: none;
+}
+
+.right:hover a{
+	opacity: 0.8;
+}
 
 @media (max-width: 1280px) {
 	.inner{
